@@ -1,0 +1,24 @@
+<nav class="navbar navbar-expand navbar-dark navbar_gjestebok">   <!-- *ngIf="user" -->
+    <div class="w_100">
+       
+        <a class="header_logo" routerLink="/">
+            <img src="../assets/logo.png" alt="logo">
+        </a>
+        <a class="header_dropdown" routerLink="/" > <!-- *ngIf="!isAdmin" -->
+             <mat-form-field (value)="selectVal">
+            <h6>Digitaliseringsfabrikken</h6>
+            <img src="../assets/Digitaliseringsfabrikken.png" alt="">
+        <mat-select>
+            <mat-option>Switch to another client</mat-option>
+            <mat-option *ngFor="let client of clients" [value]="client">{{client}}</mat-option>
+        </mat-select>
+        </mat-form-field>
+
+        
+
+        </a>
+       
+        <!-- <p>{{selectVal}}</p> -->
+       
+    </div>
+</nav>

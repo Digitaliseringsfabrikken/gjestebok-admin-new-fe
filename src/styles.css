@@ -1,1 +1,254 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+html, body { 
+    height: 100%; 
+}
+body { 
+    margin: 0; 
+    font-family: 'Roboto', sans-serif;
+ }
+h1{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 74px;
+    line-height: 88px;
+    color: #000000;
+}
+h2{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 40px;
+    color: #000000;
+}
+h3{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 29px;
+    line-height: 36px;
+}
+h4{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 32px;
+    color: #000000;
+}
+h5{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 23px;
+    line-height: 28px;
+    color: #000000;
+}
+h6{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+}
+p{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+    color: #000000;
+}
+ul, ol {
+    margin: 0 0 20px 0;
+    padding: 0 0 0 20px;
+}
+ul > li {
+    list-style: disc;
+}
+ol > li {
+    list-style: decimal;
+}
+ul li, ol li {
+    font-size: 18px;
+    line-height: 20px;
+    color: #000000;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+a:hover, a:focus {
+    text-decoration: none;
+    outline-offset: 0px;
+    outline: transparent;
+}
+img, input {
+    border: 0 none;
+    outline: 0 none;
+}
+/* --------------------------------------------
+    Form
+-------------------------------------------- */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-bottom: 20px;
+    width: 100%;
+    background: #FFFFFF;
+}
+table tr td {
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: normal;
+    padding: 18px;
+    vertical-align: middle;
+    color: #003060;
+}
+table tr th {
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: bold;
+    padding: 18px;
+    vertical-align: middle;
+    color: #003060;
+}
+/* --------------------------------------------
+    Form
+-------------------------------------------- */
+form {
+    width: 100%;
+    display: block;
+    height: auto;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+label{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #003060;
+}
+form input {
+    display: block;
+    width: 100%;
+    padding: 16px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    margin: 0 0 16px 0;
+    border: 1px solid #DDE4EE;
+    background: 0 none;
+    outline: none;
+    color: #1252A1;
+    background-color: #FAFCFE;
+}
+form textarea {
+    display: block;
+    width: 100%;
+    min-height: 211px;
+    margin: 0 0 16px 0;
+    padding: 16px;
+    resize: none;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    background: 0 none;
+    border: 1px solid #DDE4EE;
+    color: #1252A1;
+    outline: none;
+    box-sizing: border-box;
+    background-color: #FAFCFE;
+}
+form input[type="submit"] {
+    width: auto;
+    margin: 16px;
+    padding: 16px;
+    border-radius: 4px;
+    border: none;
+    background-color: #1560BD;
+
+}
+form input::placeholder {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #97ACCB;
+    padding: 16px;
+}
+/* --------------------------------------------
+    Button
+-------------------------------------------- */
+button:focus {
+outline: none;
+}
+.blue_button{
+    padding: 16px;
+    background-color: #1560BD;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 4px;
+}
+.white_button{
+    padding: 16px;
+    background-color: #ffffff;
+    border: 1px solid #DDE4EE;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #1560BD;
+    border-radius: 4px;
+}
+.blue_small_button{
+    padding: 12px;
+    background-color: #1560BD;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    border: none;
+    border-radius: 4px;
+}
+.white_small_button{
+    padding: 12px;
+    background-color: #ffffff;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    color: #1560BD;
+    border: 1px solid #DDE4EE;
+    border-radius: 4px;
+}
+.blue{
+    color: #1560BD;
+}
+.txt_center{
+    text-align: center;
+}
+.bold{
+    font-weight: 700;
+}
+.w_100{
+    width: 100%;
+}
+.m_bottom{
+    margin-bottom: 24px;
+}
+.p_relative{
+    position: relative;
+}
+a{
+    padding: 0px;
+}
+.mat-form-field-infix {
+    display: contents !important;
+    position: relative;
+    flex: auto;
+    min-width: 0;
+    width: 180px;
+}

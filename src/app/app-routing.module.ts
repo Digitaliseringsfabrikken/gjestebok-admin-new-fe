@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { AdminClientsComponent } from './admin-clients/admin-clients.component';
+import { WorkplacesComponent } from './workplaces/workplaces/workplaces.component';
 
 const routes: Routes = [
   { path: '', 
@@ -20,6 +21,10 @@ const routes: Routes = [
     path: 'admin-clients',
     component: AdminClientsComponent
   },
+  {
+    path: 'workplaces',
+    component: WorkplacesComponent
+  }
 ];
 
 @NgModule({

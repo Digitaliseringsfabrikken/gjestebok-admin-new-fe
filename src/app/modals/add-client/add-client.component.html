@@ -81,15 +81,15 @@
       <p>
         <label>Address</label> 
         <mat-form-field class="example-full-width" appearance="fill">
-          <textarea matInput formControlName="address"  cdkAutosizeMinRows="2" cdkAutosizeMaxRows="2" placeholder="Glückstads gate 149"></textarea>
+          <textarea matInput formControlName="address"  cdkAutosizeMinRows="2" cdkAutosizeMaxRows="2" placeholder="Address"></textarea>
         </mat-form-field>
       </p>
       <label>Website</label> 
       <mat-form-field class="example-full-width" appearance="fill">
-          <input matInput formControlName="website" placeholder="Address">
+          <input matInput formControlName="website" placeholder="Website">
         </mat-form-field>
   
-      <div mat-dialog-actions [align]="'end'">
+      <div mat-dialog-actions [align]="'end'">  
           <button class="white_button" mat-dialog-close="Cancel">Cancel</button>
           <button style="margin-left:20px;" class="savebtn blue_button" (click)="saveHandler()">Create Client</button>
       </div>

@@ -22,6 +22,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { PopupComponent } from './popup/popup.component';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { AddClientComponent } from './modals/add-client/add-client.component';
+import { WorkplacesComponent } from './workplaces/workplaces/workplaces.component';
+import { LocationsComponent } from './workplaces/locations/locations/locations.component';
+
 
 
 @NgModule({
@@ -33,7 +36,9 @@ import { AddClientComponent } from './modals/add-client/add-client.component';
     SidebarComponent,
     AdminClientsComponent,
     PopupComponent,
-    AddClientComponent
+    AddClientComponent,
+    WorkplacesComponent,
+    LocationsComponent
    
   ],
   imports: [

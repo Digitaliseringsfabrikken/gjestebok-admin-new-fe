@@ -1,0 +1,97 @@
+
+<!-- <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="add_new_btn">
+          <ng-template #mymodal let-modal>
+            <div class="modal-header">
+              <h4 mat-dialog-title class="modal-title" id="modal-basic-title">Add new user</h4>
+              <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                <span aria-hidden="true">×</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <form class="add_new_form">
+    
+                    <label for="" class="control-label">First name</label>
+                    <input type="text" class="inputfield"  formControlName="firstName" />
+                
+                 
+                    <label  class="control-label">Last name</label>
+                    <input type="text" class="inputfield"  formControlName="lastName" />
+                
+                
+                    <label  class="control-label">Username</label>
+                    <input type="text" class="inputfield" formControlName="username" />
+                 
+                 
+                    <label  class="control-label">Password</label>
+                    <input type="text" class="inputfield"  formControlName="password" />
+
+                    <label  class="control-label">Location</label>
+                    <select class="inputfield location_dropdown" formControlName="location">
+                      <option value="Qender">Qender</option>
+                      <option value="Swiss">Swiss</option>
+                      <option value="Prizren">Prizren</option>
+                      <option value="Lipjan">Lipjan</option>
+                      <option value="Ferizaj">Ferizaj</option>
+                      <option value="Albi">Albi</option>
+                      <option value="Royal_Mall">Royal Mall</option>
+                      <option value="Dardani">Dardani</option>
+                      <option value="Dragodan">Dragodan</option>
+                      <option value="Fushe_Kosove">Fushe Kosove</option>
+                    </select>
+                    <div mat-dialog-actions [align]="'end'">
+                        <button mat-raised-button color="warn" mat-dialog-close="Cancel">Cancel</button>
+                        <button class="savebtn" (click)="saveHandler()">Register</button>
+                    </div>
+                  
+                
+                </form>
+            </div>
+          </ng-template>
+        </div>
+      </div>
+    </div>
+</div> -->
+
+
+<form [formGroup]="formGroupAdd" class="example-form gjestebok_modal">
+    <h4>Add client</h4>
+    <h6>Clients deatails</h6>
+     
+        <label>First name</label> 
+        <mat-form-field class="example-full-width" appearance="fill">
+          <input matInput formControlName="name" placeholder="Digitaliseringsfabrikken">
+        </mat-form-field>
+      
+      <label>Email</label> 
+      <mat-form-field class="example-full-width" appearance="fill">
+          <!-- <mat-label>Email</mat-label> -->
+          <input type="email" matInput formControlName="email" placeholder="example@email.com">
+          <!-- email.invalid && !email.hasError('required') -->
+          <!-- <mat-error *ngIf="">
+            Please enter a valid email address
+          </mat-error>
+          <mat-error *ngIf="email.hasError('required')">
+            Email is <strong>required</strong>
+          </mat-error> -->
+        </mat-form-field>
+    
+      <p>
+        <label>Address</label> 
+        <mat-form-field class="example-full-width" appearance="fill">
+          <textarea matInput formControlName="address"  cdkAutosizeMinRows="2" cdkAutosizeMaxRows="2" placeholder="Glückstads gate 149"></textarea>
+        </mat-form-field>
+      </p>
+      <label>Website</label> 
+      <mat-form-field class="example-full-width" appearance="fill">
+          <input matInput formControlName="website" placeholder="Address">
+        </mat-form-field>
+  
+      <div mat-dialog-actions [align]="'end'">
+          <button class="white_button" mat-dialog-close="Cancel">Cancel</button>
+          <button style="margin-left:20px;" class="savebtn blue_button" (click)="saveHandler()">Create Client</button>
+      </div>
+  
+    </form>

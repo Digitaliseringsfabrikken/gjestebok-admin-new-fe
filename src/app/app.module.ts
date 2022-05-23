@@ -9,6 +9,20 @@ import { HeaderComponent } from './header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSelectModule } from '@angular/material/select';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { AdminClientsComponent } from './admin-clients/admin-clients.component';
+import { AgGridModule } from 'ag-grid-angular';
+import { HttpClientModule,  HTTP_INTERCEPTORS} from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {MatTableModule} from '@angular/material/table';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatInputModule} from '@angular/material/input';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {MatSort, MatSortModule} from '@angular/material/sort';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { PopupComponent } from './popup/popup.component';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { AddClientComponent } from './modals/add-client/add-client.component';
+
 
 @NgModule({
   declarations: [
@@ -16,13 +30,32 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     LoginComponent,
     AdminDashboardComponent,
     HeaderComponent,
-    SidebarComponent
+    SidebarComponent,
+    AdminClientsComponent,
+    PopupComponent,
+    AddClientComponent
+   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatSelectModule,
+    AgGridModule.withComponents([]),
+    HttpClientModule,
+    // NgbModule,
+    ReactiveFormsModule,
+    FormsModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatInputModule,
+    MatProgressSpinnerModule,
+    MatSortModule,
+    MatFormFieldModule,
+    MatDialogModule
+    
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]

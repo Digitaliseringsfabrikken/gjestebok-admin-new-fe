@@ -1,0 +1,79 @@
+.viewed_clients{
+    margin-top: 85px;
+}
+.example-sidenav-content{
+    margin-top: 50px;
+}
+.clients_box{
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+    border: 1px solid #DDE4EE;
+    margin-bottom: 35px;
+}
+img.dot {
+    padding: 0 10px;
+}
+img.logo{
+    width: 110px;
+
+}
+.clients_box h5{
+  display: inline-block;
+  color: #003060;
+  ;
+}
+.top_info{
+    display: block;
+}
+.top_info span{
+    color: #97ACCB;
+    font-size: 16px;
+    line-height: 20px;
+}
+.admin_dashboard{
+    background: #e5e5e5;
+    padding: 50px 0;
+}
+.admin_dashboard h2{
+    color: #97ACCB;
+    margin-bottom: 8px;
+}
+.admin_dashboard h1{
+    color: #003060;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+.admin_dashboard h4{
+    color: #003060;
+    margin-bottom: 8px;
+}
+.blue_button{
+    font-weight: 500;
+font-size: 26px;
+line-height: 32px;
+}
+.viewed_clients h4{
+    margin-bottom: 30px;
+}
+.three_dots{
+    position: absolute;
+    right: 23px;
+    top: 20px;
+    display: grid;
+}
+.three_dots img{
+   margin-bottom: 6px;
+}
+.image_text h5{
+    font-weight: 600;
+    color:#003060;
+    padding-top: 15px;
+    margin-left: 10px;
+}
+.image_text{
+    font-weight: 600;
+    color:#003060;
+    display: flex;
+    padding: 25px 0px 10px 0px;
+}

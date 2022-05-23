@@ -1,66 +1,61 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
 html, body { 
-    height: 100%; 
+    height: 100% !important; 
+    background: #E5E5E5;
 }
 body { 
-    margin: 0; 
-    font-family: 'Roboto', sans-serif;
+    margin: 0 !important; 
+    font-family: 'Roboto', sans-serif !important; 
  }
 h1{
-    font-family: 'Roboto', sans-serif;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 74px;
-    line-height: 88px;
-    color: #000000;
+    font-family: 'Roboto', sans-serif !important; 
+    font-style: normal !important; 
+    font-weight: 600; 
+    font-size: 74px !important; 
+    line-height: 88px !important; 
 }
 h2{
-    font-family: 'Roboto', sans-serif;
-    font-style: normal;
+    font-family: 'Roboto', sans-serif !important;
+    font-style: normal !important;
     font-weight: 400;
-    font-size: 32px;
-    line-height: 40px;
-    color: #000000;
+    font-size: 32px !important;
+    line-height: 40px !important;
 }
 h3{
-    font-family: 'Roboto', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 29px;
-    line-height: 36px;
+    font-family: 'Roboto', sans-serif !important;
+    font-style: normal !important;
+    font-weight: 400 ;
+    font-size: 29px !important;
+    line-height: 36px !important;
 }
 h4{
-    font-family: 'Roboto', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 26px;
-    line-height: 32px;
-    color: #000000;
+    font-family: 'Roboto', sans-serif !important;
+    font-style: normal !important;
+    font-weight: 400 ;
+    font-size: 26px !important;
+    line-height: 32px !important;
 }
 h5{
-    font-family: 'Roboto', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 23px;
-    line-height: 28px;
-    color: #000000;
+    font-family: 'Roboto', sans-serif !important;
+    font-style: normal !important;
+    font-weight: 400 ;
+    font-size: 23px !important;
+    line-height: 28px !important;
 }
 h6{
-    font-family: 'Roboto', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 24px;
-    color: #000000;
+    font-family: 'Roboto', sans-serif !important;
+    font-style: normal !important;
+    font-weight: 400 ;
+    font-size: 20px !important;
+    line-height: 24px !important;
 }
 p{
-    font-family: 'Roboto', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 20px;
-    color: #000000;
+    font-family: 'Roboto', sans-serif !important;
+    font-style: normal !important;
+    font-weight: 400 ;
+    font-size: 18px !important;
+    line-height: 20px !important;
 }
 ul, ol {
     margin: 0 0 20px 0;
@@ -80,9 +75,9 @@ ul li, ol li {
     padding: 0 0 0 0;
 }
 a:hover, a:focus {
-    text-decoration: none;
-    outline-offset: 0px;
-    outline: transparent;
+    text-decoration: none !important;
+    outline-offset: 0px !important;
+    outline: transparent !important;
 }
 img, input {
     border: 0 none;
@@ -105,6 +100,7 @@ table tr td {
     padding: 18px;
     vertical-align: middle;
     color: #003060;
+    font-family: 'Roboto', sans-serif !important;
 }
 table tr th {
     font-size: inherit;
@@ -113,6 +109,7 @@ table tr th {
     padding: 18px;
     vertical-align: middle;
     color: #003060;
+    font-family: 'Roboto', sans-serif !important;
 }
 /* --------------------------------------------
     Form
@@ -132,6 +129,14 @@ label{
     line-height: 16px;
     color: #003060;
 }
+mat-labe{
+    font-family: 'Roboto', sans-serif !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    font-size: 14px !important;
+    line-height: 16px !important;
+    color: #003060 !important;
+}
 form input {
     display: block;
     width: 100%;
@@ -145,11 +150,11 @@ form input {
     outline: none;
     color: #1252A1;
     background-color: #FAFCFE;
+    font-family: 'Roboto', sans-serif !important;
 }
 form textarea {
     display: block;
     width: 100%;
-    min-height: 211px;
     margin: 0 0 16px 0;
     padding: 16px;
     resize: none;
@@ -162,6 +167,7 @@ form textarea {
     outline: none;
     box-sizing: border-box;
     background-color: #FAFCFE;
+    font-family: 'Roboto', sans-serif !important;
 }
 form input[type="submit"] {
     width: auto;
@@ -170,14 +176,19 @@ form input[type="submit"] {
     border-radius: 4px;
     border: none;
     background-color: #1560BD;
+    font-family: 'Roboto', sans-serif !important;
 
 }
-form input::placeholder {
+form input::placeholder, form textarea::placeholder {
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
     color: #97ACCB;
-    padding: 16px;
+    padding: 14px 16px;
+    font-family: 'Roboto', sans-serif !important;
+}
+.c_pointer{
+    cursor: pointer;
 }
 /* --------------------------------------------
     Button
@@ -194,6 +205,9 @@ outline: none;
     color: #FFFFFF;
     border: none;
     border-radius: 4px;
+    font-family: 'Roboto', sans-serif !important;
+    cursor: pointer;
+
 }
 .white_button{
     padding: 16px;
@@ -204,6 +218,8 @@ outline: none;
     line-height: 16px;
     color: #1560BD;
     border-radius: 4px;
+    font-family: 'Roboto', sans-serif !important;
+    cursor: pointer;
 }
 .blue_small_button{
     padding: 12px;
@@ -213,6 +229,8 @@ outline: none;
     line-height: 16px;
     border: none;
     border-radius: 4px;
+    font-family: 'Roboto', sans-serif !important;
+    cursor: pointer;
 }
 .white_small_button{
     padding: 12px;
@@ -223,6 +241,8 @@ outline: none;
     color: #1560BD;
     border: 1px solid #DDE4EE;
     border-radius: 4px;
+    font-family: 'Roboto', sans-serif !important;
+    cursor: pointer;
 }
 .blue{
     color: #1560BD;
@@ -251,4 +271,135 @@ a{
     flex: auto;
     min-width: 0;
     width: 180px;
+}
+.background_page{
+    background-color: #E5E5E5;
+}
+
+/* tables */
+tr.mat-header-row {
+    color: #97ACCB;
+    background: #E5E5E5;
+  }
+  th.mat-header-cell{
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
+    color:#97ACCB;
+}
+.mat-elevation-z8 {
+    box-shadow: none;
+}
+tr.mat-row {
+    height: 56px !important;
+}
+.mat-cell {
+    font-size: 16px;
+    line-height: 20px;
+    color:#003060;
+}
+td.mat-cell {
+    border-bottom: 1px solid #DDE4EE !important;
+    border-top: 1px solid #DDE4EE !important;
+    border-bottom-left-radius: 4px !important;
+    border-top-left-radius: 4px !important;
+   }
+
+   td.mat-cell:first-child {
+    border-left: 1px solid #DDE4EE;
+  }
+  
+  td.mat-cell:last-child {
+    border-right: 1px solid #DDE4EE;
+  }
+  .mat-form-field-appearance-legacy .mat-form-field-label {
+    color: #97ACCB !important;
+    font-size: 16px !important;
+    line-height: 20px !important;
+    margin-top: 6px !important;
+    margin-left: 45px !important;
+  }
+  .mat-form-field-appearance-legacy.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label{
+    display: none !important;
+  }
+  /* pagination */
+  .mat-paginator-outer-container {
+    display: flex;
+    background: #E5E5E5 !important;
+}
+.mat-paginator-page-size {
+    display: flex;
+    align-items: baseline;
+    margin-right: 8px;
+    display: none !important;
+}
+.mat-paginator-container {
+    width: 100% !important;
+}
+.mat-paginator-range-actions {
+    width: 100% !important;
+}
+.mat-paginator, .mat-paginator-page-size .mat-select-trigger {
+    color: #003060 !important;
+    font-size: 16px;
+    margin: 0px !important;
+}
+.mat-paginator-navigation-previous{
+    position: absolute !important;
+    right: 60px !important;
+}
+.mat-paginator-navigation-next{
+    position: absolute !important;
+    right: 20px !important;  
+}
+::ng-deep .mat-sort-header-container:not(.mat-sort-header-sorted) .mat-sort-header-arrow {
+    opacity: 0.54 !important;
+    transform: translateY(0px) !important;
+  }
+  .view{
+    padding: 7px 4px;
+    background: #F5F7FA;
+    border-radius: 4px;
+    margin-right: 6px;
+  }
+  .edit{
+    padding: 6.5px 6.5px;
+    background: #F5F7FA;
+    border-radius: 4px;
+    margin-right: 6px;
+  }
+  .delete{
+    padding: 7px 8px;
+    background: #F5F7FA;
+    border-radius: 4px;
+    margin-right: 6px;
+  }
+
+  /* modals */
+  .gjestebok_modal h4{
+    color: #1560BD;
+    margin-bottom: 25px;
+  }
+  .gjestebok_modal h6{
+      font-size: 18px !important;
+      line-height: 24px;
+      color: #003060;
+      margin-bottom: 25px;
+  }
+  .mat-form-field-appearance-fill .mat-form-field-flex {
+    border-radius: 4px;
+    padding: 0px !important;
+}
+.gjestebok_modal input{
+    padding: 14px 16px !important;
+    background: #FAFCFE !important;
+    border-radius: 4px !important;
+    border: 1px solid #DDE4EE !important;
+}
+.gjestebok_modal textarea{
+    padding: 14px 16px !important;
+    height: 97px !important;
+    background: #FAFCFE !important;
+    border-radius: 4px !important;
+    border: 1px solid #DDE4EE !important;
 }

@@ -15,7 +15,8 @@ import { Client } from './../models/clients.model';
 import { MatPaginator } from '@angular/material/paginator';
 import {MatDialog, MatDialogModule ,  MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { AddClientComponent } from '../modals/add-client/add-client.component';
-// import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
+import { EditClientComponent } from '../modals/edit-client/edit-client.component';
+import { DeleteClientComponent } from '../modals/delete-client/delete-client.component';
 
 @Component({
   selector: 'app-admin-clients',
@@ -36,16 +37,21 @@ openDialog(){
     width:'50%'
   });
 }
+openEditDialog(element:any){
+  console.log('heree edit', element)
+  this.dialog.open(EditClientComponent, {
+    width:'50%'
+  });
+}
 view(element:any){
   console.log('heree view', element)
 
 }
-edit(element:any){
-  console.log('heree edit', element)
-}
-delete(element:any){
-  console.log('heree delete', element)
-
+openDeleteDialog(element:any){
+  // console.log('heree delete', element)
+  this.dialog.open(DeleteClientComponent, {
+    width:'50%'
+  });
 }
 
   // @ViewChild(MatSort, {static: false})

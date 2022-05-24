@@ -61,12 +61,12 @@
 
       <ng-container matColumnDef="edit">
         <th mat-header-cell *matHeaderCellDef> </th>
-        <td mat-cell *matCellDef="let element">  <img (click)="edit(element)" src="../assets/edit.png" alt="" class="c_pointer edit"> </td>
+        <td mat-cell *matCellDef="let element">  <img (click)="openEditDialog(element)" src="../assets/edit.png" alt="" class="c_pointer edit"> </td>
       </ng-container>
 
       <ng-container matColumnDef="delete">
         <th mat-header-cell *matHeaderCellDef> </th>
-        <td mat-cell *matCellDef="let element">  <img (click)="delete(element)" src="../assets/delete.png" alt="" class="c_pointer delete"> </td>
+        <td mat-cell *matCellDef="let element">  <img (click)="openDeleteDialog(element)" src="../assets/delete.png" alt="" class="c_pointer delete"> </td>
       </ng-container>
     
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

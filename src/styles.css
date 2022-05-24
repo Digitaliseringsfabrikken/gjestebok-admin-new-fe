@@ -376,14 +376,24 @@ td.mat-cell {
   }
 
   /* modals */
-  .gjestebok_modal h4{
+  .gjestebok_modal{
+      padding-bottom: 30px;
+  }
+  .modal_title{
     color: #1560BD;
+    margin-bottom: 25px;
+    font-weight: 500 !important;   
+  }
+  .modal_subtitle{
+    font-size: 18px !important;
+    line-height: 24px;
+    color: #003060 !important;
     margin-bottom: 25px;
   }
   .gjestebok_modal h6{
       font-size: 18px !important;
       line-height: 24px;
-      color: #003060;
+      color: #003060 !important;
       margin-bottom: 25px;
   }
   .mat-form-field-appearance-fill .mat-form-field-flex {
@@ -395,6 +405,9 @@ td.mat-cell {
     background: #FAFCFE !important;
     border-radius: 4px !important;
     border: 1px solid #DDE4EE !important;
+    font-size: 16px;
+    line-height: 20px;
+    color: #1252A1;
 }
 .gjestebok_modal textarea{
     padding: 14px 16px !important;
@@ -402,4 +415,69 @@ td.mat-cell {
     background: #FAFCFE !important;
     border-radius: 4px !important;
     border: 1px solid #DDE4EE !important;
+    font-size: 16px;
+    line-height: 20px;
+    color: #1252A1;
+}
+.gjestebok_modal input::placeholder, .gjestebok_modal textarea::placeholder {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #97ACCB;
+    padding: 0px;
+    font-family: 'Roboto', sans-serif !important;
+}
+.form_border{
+    border: 1px solid #DDE4EE;
+    border-radius: 4px;
+    padding: 16px 16px 0px 16px;
+}
+.d_flex{
+    display: flex;
+  }
+  .border_form{
+    border-top: 1px solid #DDE4EE;
+    padding-top: 30px;
+    
+  }
+  .right_buttons{
+    float: right;
+  }
+  .white_box{
+    background-color: #ffffff;
+    border: 1px solid #DDE4EE;
+    border-radius: 8px;
+    padding: 24px;
+  }
+  .white_box h5{
+   font-weight: 600;
+   color: #003060;
+  }
+  .title_button{
+      margin-bottom: 25px;
+  }
+.title_button h5{
+    display: inline-block;
+}
+.title_button .blue_button{
+    display: inline-block;
+    float: right;
+}
+.gray_box{
+    background: #F8FAFC;
+    border: 1px solid #DDE4EE;
+    border-radius: 4px;
+    color: #1560BD;
+    padding: 15px;
+}
+.gray_box span{
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 40px;
+    padding-right: 10px;
+}
+.gray_box h6{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
 }

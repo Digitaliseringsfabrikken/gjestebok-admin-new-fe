@@ -1,0 +1,62 @@
+.client_dashboard{
+    background: #e5e5e5;
+    padding: 50px 0;
+}
+.client_dashboard h2{
+    color: #97ACCB;
+    margin-bottom: 8px;
+}
+.client_dashboard h1{
+    color: #003060;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+.client_dashboard h4{
+    color: #003060;
+    margin-bottom: 8px;
+}
+.welcome_text{
+    margin-bottom: 77px;
+}
+.m_36{
+    margin-bottom: 36px;
+}
+.gray_boxes{
+    display: flex;
+    justify-content: space-between;
+}
+.w_47{
+    width: 47%;
+}
+.txt_center{
+ text-align: center;
+}
+.title_subtitle{
+    display: inline-block;
+
+}
+.title_subtitle h5{
+    font-weight: 500;
+}
+.show_devices {
+    display: flex;
+    float: right;
+    background: #E8ECF2;
+    border: none;
+}
+.title_subtitle p{
+    color: #97ACCB;
+}
+.gray_boxes_most_used_devices .gray_box h6{
+    font-size: 11px !important;
+    line-height: 12px !important;
+    color: #1560BD;
+    padding: 4px;
+    margin-bottom: 0px;
+}
+.gray_boxes_most_used_devices .gray_box span{
+    font-weight: 600;
+    font-size: 26px !important;
+    line-height: 32px !important;
+    color: #1560BD;
+}

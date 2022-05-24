@@ -22,6 +22,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { PopupComponent } from './popup/popup.component';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { AddClientComponent } from './modals/add-client/add-client.component';
+import { EditClientComponent } from './modals/edit-client/edit-client.component';
+import { DeleteClientComponent } from './modals/delete-client/delete-client.component';
+import { ClientDashboardComponent } from './client-dashboard/client-dashboard.component';
 
 
 @NgModule({
@@ -33,7 +36,10 @@ import { AddClientComponent } from './modals/add-client/add-client.component';
     SidebarComponent,
     AdminClientsComponent,
     PopupComponent,
-    AddClientComponent
+    AddClientComponent,
+    EditClientComponent,
+    DeleteClientComponent,
+    ClientDashboardComponent
    
   ],
   imports: [

@@ -4,11 +4,11 @@ import {Subscription} from 'rxjs';
 import {PacketService} from '../../packet.service';
 
 @Component({
-  selector: 'app-add-client',
-  templateUrl: './add-client.component.html',
-  styleUrls: ['./add-client.component.css']
+  selector: 'app-edit-client',
+  templateUrl: './edit-client.component.html',
+  styleUrls: ['./edit-client.component.css']
 })
-export class AddClientComponent implements OnInit {
+export class EditClientComponent implements OnInit {
   public formGroupAdd: FormGroup;
   subscriptions = new Subscription();
 
@@ -45,4 +45,5 @@ export class AddClientComponent implements OnInit {
     //       })
     //       );
   }
+
 }

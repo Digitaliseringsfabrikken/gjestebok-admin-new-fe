@@ -1,11 +1,12 @@
 .overall{
     margin-bottom: 50px;
 }
-.title h2{
+.title{
     font-size: 32px;
     line-height: 40px;
     color: #003060;
     font-weight: 600;
+    margin-bottom: 34px;
 }
 .header{
     font-size: 23px;
@@ -158,3 +159,6 @@ hr{
    top: 2px;
    left: -18px;
 }  
+.workplaces_overview h2{
+    color: #1560BD;
+}

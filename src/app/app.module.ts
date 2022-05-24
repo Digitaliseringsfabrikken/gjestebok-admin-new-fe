@@ -25,6 +25,9 @@ import { AddClientComponent } from './modals/add-client/add-client.component';
 import { EditClientComponent } from './modals/edit-client/edit-client.component';
 import { DeleteClientComponent } from './modals/delete-client/delete-client.component';
 import { ClientDashboardComponent } from './client-dashboard/client-dashboard.component';
+import { WorkplacesComponent } from './workplaces/workplaces/workplaces.component';
+import { LocationsComponent } from './workplaces/locations/locations/locations.component';
+
 
 
 @NgModule({
@@ -39,7 +42,9 @@ import { ClientDashboardComponent } from './client-dashboard/client-dashboard.co
     AddClientComponent,
     EditClientComponent,
     DeleteClientComponent,
-    ClientDashboardComponent
+    ClientDashboardComponent,
+    WorkplacesComponent,
+    LocationsComponent
    
   ],
   imports: [

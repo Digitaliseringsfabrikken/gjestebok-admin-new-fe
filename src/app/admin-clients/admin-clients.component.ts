@@ -7,6 +7,7 @@ import {
   GridApi,
   GridReadyEvent,
   ICellRendererParams,
+  PopupComponent,
 } from 'ag-grid-community';
 import {FormGroup, FormControl, FormBuilder} from '@angular/forms';
 import { MatSort, Sort } from '@angular/material/sort';
@@ -28,7 +29,7 @@ export class AdminClientsComponent implements OnInit, AfterViewInit  {
   public rowData = new MatTableDataSource<Client>();
   private gridApi!: GridApi;
   public displayedColumns = ['image', 'name', 'email', 'sms', 'created_at', 'view', 'edit', 'delete'];
-  constructor(private packetService: PacketService, private excelService:ExcelService, public dialog: MatDialog) { }
+  constructor(private packetService: PacketService, private excelService:ExcelService, public dialog: MatDialog){}
 
 
   // Final Popup
@@ -43,6 +44,7 @@ openEditDialog(element:any){
     width:'50%'
   });
 }
+
 view(element:any){
   console.log('heree view', element)
 

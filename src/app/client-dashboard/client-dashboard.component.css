@@ -60,3 +60,66 @@
     line-height: 32px !important;
     color: #1560BD;
 }
+
+/* Bubble */
+.bubble{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.bubble_1{
+    transform: translate(107px, 34px);
+    background-color: #1560BD;
+    width: 230px;
+    height: 230px;
+    position: relative;
+    border-radius: 50%;
+    transition: 0.5s ease-in-out;
+   
+}
+.inside_info{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.inside_info span {
+    display:block;
+}
+.buton{
+    display: none;
+    transition: 0.7s ease-in-out !important;
+}
+
+.bubble_2{
+    transform: translate(-5px, 183px);
+    background-color: #5D8EF0;
+    width: 230px;
+    height: 230px;
+    position: relative;
+    border-radius: 50%;
+    transition: 0.5s ease-in-out;
+}
+
+.bubble_3{
+    transform: translate(-127px, 42px);
+    background-color: #00388C;
+    width: 230px;
+    height: 230px;
+    position: relative;
+    border-radius: 50%;
+    transition: 0.5s ease-in-out;
+}
+.bubble_1:hover, .bubble_2:hover, .bubble_3:hover{
+    width: 270px;
+    height: 270px;
+    display: block;
+}
+.bubble_1:hover .buton, .bubble_2:hover .buton, .bubble_3:hover .buton{
+    display: block;
+    transition: 0.7s ease-in-out !important;
+}
+.bubble_1:hover + .bubble_2{
+    opacity: 50% !important;
+}

@@ -1,4 +1,4 @@
-.login_logo{
+/* .login_logo{
     text-align: center;
     margin-bottom: 40px;
 }
@@ -9,4 +9,66 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 35%;
+} */
+html,body{
+    background: #F2F7FF !important;
+    height: 150vh !important;
+    width: 100%;
+    position: relative;
+}
+.center_login{
+    margin-top: 50px;
+}
+
+.forgot-psw{
+    float: right;
+}
+.checkbox{
+    display: inline-flex;
+}
+.waves img{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+}
+.extra{
+    margin-top: 20px;
+}
+.login_btn{
+    background-color: #1560BD;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 16px;
+   
+}
+button.login_btn.btn-block:hover  {
+    cursor: pointer !important;
+}
+.center_login h3{
+    font-weight: 400;
+font-size: 32px;
+line-height: 40px;
+color: #003060;
+}
+.center_login p{
+    color: #97ACCB;
+    font-weight: 400;
+font-size: 18px;
+line-height: 24px;
+}
+.card_login{
+    margin-top: 30px;
+}
+input.checkbox_login{
+    width: 20px;
+}
+label{
+   display: inline-flex;
+}
+.dont_have{
+    text-align: center;
+    display: block;
+    margin-top: 20px;
 }

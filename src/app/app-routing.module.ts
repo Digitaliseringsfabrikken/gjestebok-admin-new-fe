@@ -5,6 +5,7 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
 import { ClientDashboardComponent } from './client-dashboard/client-dashboard.component';
 import { AdminClientsComponent } from './admin-clients/admin-clients.component';
 import { WorkplacesComponent } from './workplaces/workplaces/workplaces.component';
+import { LocationsComponent } from './workplaces/locations/locations.component';
 
 const routes: Routes = [
   { path: '', 
@@ -29,6 +30,10 @@ const routes: Routes = [
   {
     path: 'workplaces',
     component: WorkplacesComponent
+  },
+  {
+    path: 'workplace-locations',
+    component: LocationsComponent
   }
 ];
 

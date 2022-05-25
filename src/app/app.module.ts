@@ -26,7 +26,13 @@ import { EditClientComponent } from './modals/edit-client/edit-client.component'
 import { DeleteClientComponent } from './modals/delete-client/delete-client.component';
 import { ClientDashboardComponent } from './client-dashboard/client-dashboard.component';
 import { WorkplacesComponent } from './workplaces/workplaces/workplaces.component';
-import { LocationsComponent } from './workplaces/locations/locations/locations.component';
+import { LocationsComponent } from './workplaces/locations/locations.component';
+import {MatTabsModule} from '@angular/material/tabs';
+import { CompaniesComponent } from './workplaces/companies/companies.component';
+import {MatIconModule} from '@angular/material/icon';
+import { EmployeesComponent } from './workplaces/employees/employees.component';
+
+
 
 
 
@@ -44,7 +50,9 @@ import { LocationsComponent } from './workplaces/locations/locations/locations.c
     DeleteClientComponent,
     ClientDashboardComponent,
     WorkplacesComponent,
-    LocationsComponent
+    LocationsComponent,
+    CompaniesComponent,
+    EmployeesComponent
    
   ],
   imports: [
@@ -63,7 +71,9 @@ import { LocationsComponent } from './workplaces/locations/locations/locations.c
     MatProgressSpinnerModule,
     MatSortModule,
     MatFormFieldModule,
-    MatDialogModule
+    MatDialogModule,
+    MatTabsModule,
+    MatIconModule
     
 
 

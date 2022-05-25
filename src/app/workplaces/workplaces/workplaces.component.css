@@ -142,7 +142,7 @@ hr{
 .recently_2::before{
     position: absolute;
     content: '';
-   background-color: #32C7FA !important;
+   background-color: #54B2BB !important;
    border-radius: 50%;
    width: 15px;
    height: 15px;
@@ -152,7 +152,7 @@ hr{
 .recently_3::before{
     position: absolute;
     content: '';
-   background-color: #F58722 !important;
+   background-color: #681EB5 !important;
    border-radius: 50%;
    width: 15px;
    height: 15px;

@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
 html, body { 
     height: 100% !important; 
-    background: #E5E5E5;
+    background: #F5F7FA;
 }
 body { 
     margin: 0 !important; 
@@ -86,12 +86,15 @@ img, input {
 /* --------------------------------------------
     Form
 -------------------------------------------- */
+.mat-table{
+    background: transparent !important;
+}
 table {
     border-collapse: collapse;
     border-spacing: 0;
     margin-bottom: 20px;
     width: 100%;
-    background: #FFFFFF;
+    /* background: #FFFFFF; */
 }
 table tr td {
     font-size: inherit;
@@ -149,7 +152,7 @@ form input {
     background: 0 none;
     outline: none;
     color: #1252A1;
-    background-color: #FAFCFE;
+    /* background-color: #FAFCFE; */
     font-family: 'Roboto', sans-serif !important;
 }
 form textarea {
@@ -273,13 +276,13 @@ a{
     width: 180px;
 }
 .background_page{
-    background-color: #E5E5E5;
+    background-color: #F5F7FA;
 }
 
 /* tables */
 tr.mat-header-row {
     color: #97ACCB;
-    background: #E5E5E5;
+    /* background: #E5E5E5; */
   }
   th.mat-header-cell{
     font-size: 16px;

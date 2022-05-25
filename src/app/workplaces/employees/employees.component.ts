@@ -28,7 +28,7 @@ export class EmployeesComponent implements OnInit, AfterViewInit {
   public clients :any
   public rowData = new MatTableDataSource<Client>();
   private gridApi!: GridApi;
-  public displayedColumns = ['name', 'contact', 'domain', 'locations', 'edit', 'delete'];
+  public displayedColumns = ['name', 'contact', 'company', 'departament','location', 'edit', 'delete'];
   constructor(private packetService: PacketService, private excelService:ExcelService, public dialog: MatDialog){}
 
 // Final Popup

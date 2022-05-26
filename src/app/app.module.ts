@@ -31,6 +31,7 @@ import {MatTabsModule} from '@angular/material/tabs';
 import { CompaniesComponent } from './workplaces/companies/companies.component';
 import {MatIconModule} from '@angular/material/icon';
 import { EmployeesComponent } from './workplaces/employees/employees.component';
+import { AddLocationComponent } from './modals/add-location/add-location.component';
 
 
 
@@ -52,7 +53,8 @@ import { EmployeesComponent } from './workplaces/employees/employees.component';
     WorkplacesComponent,
     LocationsComponent,
     CompaniesComponent,
-    EmployeesComponent
+    EmployeesComponent,
+    AddLocationComponent
    
   ],
   imports: [
@@ -73,7 +75,8 @@ import { EmployeesComponent } from './workplaces/employees/employees.component';
     MatFormFieldModule,
     MatDialogModule,
     MatTabsModule,
-    MatIconModule
+    MatIconModule,
+    ReactiveFormsModule
     
 
 

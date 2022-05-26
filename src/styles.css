@@ -132,7 +132,7 @@ label{
     line-height: 16px;
     color: #003060;
 }
-mat-labe{
+.mat-label{
     font-family: 'Roboto', sans-serif !important;
     font-style: normal !important;
     font-weight: 400 !important;

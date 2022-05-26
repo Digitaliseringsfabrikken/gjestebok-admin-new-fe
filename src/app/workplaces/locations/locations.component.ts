@@ -15,6 +15,7 @@ import { MatTableDataSource } from '@angular/material/table';
 import { Client } from 'src/app/models/clients.model';
 import { MatPaginator } from '@angular/material/paginator';
 import {MatDialog, MatDialogModule ,  MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { AddLocationComponent } from 'src/app/modals/add-location/add-location.component';
 
 
 
@@ -37,14 +38,14 @@ export class LocationsComponent implements OnInit, AfterViewInit{
 
   // Final Popup
 openDialog(){
-  this.dialog.open(LocationsComponent, {
-    width:'50%'
+  this.dialog.open(AddLocationComponent, {
+    width:'60%'
   });
 }
 openEditDialog(element:any){
   console.log('heree edit', element)
   this.dialog.open(LocationsComponent, {
-    width:'50%'
+    width:'60%'
   });
 }
 

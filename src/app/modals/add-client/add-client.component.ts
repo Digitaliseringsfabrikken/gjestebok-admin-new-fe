@@ -9,7 +9,7 @@ import {PacketService} from '../../packet.service';
   styleUrls: ['./add-client.component.css']
 })
 export class AddClientComponent implements OnInit {
-  public formGroupAdd: FormGroup;
+  public formGroupAdd !: FormGroup;
   subscriptions = new Subscription();
 
   constructor(private packetService: PacketService) { }

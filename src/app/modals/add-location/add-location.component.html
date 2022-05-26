@@ -1,0 +1,97 @@
+<h4>Add location</h4>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <form [formGroup]="form" (submit)="submit(form.value)">
+
+                <label>Location name</label> 
+                            <mat-form-field class="example-full-width" appearance="fill">
+                              <input matInput formControlName="name" placeholder="Digitaliseringsfabrikken">
+                            </mat-form-field>
+                            </form>
+        </div>
+        <div class="col-md-7">
+            <form [formGroup]="form" (submit)="submit(form.value)">
+
+                <label>Location details</label> 
+                <div class="form_border">
+                    <label>Street</label>
+                    <mat-form-field class="example-full-width" appearance="fill">
+                        <input matInput formControlName="name" placeholder="Glückstads gate 149">
+                      </mat-form-field>
+                      <div class="row">
+                          <div class="col-md-7">
+                            <label>City</label>
+                            <mat-form-field class="example-full-width" appearance="fill">
+                                <input matInput formControlName="name" placeholder="Oslo">
+                              </mat-form-field>
+                          </div>
+                          <div class="col-md-5">
+                            <label>Postal code</label>
+                            <mat-form-field class="example-full-width" appearance="fill">
+                                <input matInput formControlName="name" placeholder="0170">
+                              </mat-form-field>
+                          </div>
+                          <div class="col-md-6">
+                            <label>Country</label>
+                            <mat-form-field class="example-full-width" appearance="fill">
+                                <input matInput formControlName="name" placeholder="Norway">
+                              </mat-form-field>
+                          </div>
+                          <div class="col-md-6">
+                            <label>Time zone</label>
+                            <mat-form-field appearance="fill">
+                                <mat-label>Favorite Food</mat-label>
+                                <mat-select [formControl]="foodControl" name="food">
+                                  <mat-option>None</mat-option>
+                                  <mat-option *ngFor="let food of foods" [value]="food.value">
+                                    {{food.viewValue}}
+                                  </mat-option>
+                                </mat-select>
+                              </mat-form-field>
+                          </div>
+                      </div>
+
+                      
+
+                      
+
+                     
+                      
+                  
+                    <div class="right_buttons">
+                        <button class="white_button" mat-dialog-close="Cancel">Cancel</button>
+                        <button style="margin-left:20px;" class="savebtn blue_button" (click)="saveHandler()">Create Client</button>
+                      </div> 
+                      <div class="left_btn">
+                        <button class="white_button" mat-dialog-close="Cancel">Add companies to location</button>
+                      </div>
+                </div>
+
+               
+            </form>
+        </div>
+        <div class="col-md-5">
+            <form [formGroup]="form" (submit)="submit(form.value)">
+                <fieldset>
+                    <legend>Entrances</legend>
+                    <ng-container formArrayName="contacts" *ngFor="let contact of contacts.controls; index as i">
+                      <ng-container [formGroupName]="i">
+                       
+                        <input matInput formControlName="name" placeholder="Digitaliseringsfabrikken">
+                
+                        <button class="btn-remove" type="button" (click)="removeContactField(i)">x</button>
+                
+                        <br><br>
+                      </ng-container>
+                    </ng-container>
+                
+                    <button class="btn-add" type="button" (click)="addContactField()">Add</button>
+                  </fieldset>
+            </form>
+            
+        </div>
+    </div>
+</div>
+
+  

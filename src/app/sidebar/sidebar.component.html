@@ -1,1 +1,42 @@
-<p>sidebar works!</p>
+<div class="sidenav" [ngClass]="collapsed ? 'sidenav-collapsed': ''">
+  <div class="logo-container">
+    <div class="user_card" role="button" (click)="toggleCollapse()">
+                  <img class="user_img" src="../../assets/image 18.png" alt="user img">
+                  <div class="info_user"  @fadeInOut *ngIf="collapsed">
+                      <span>Hi, Alexander </span>
+                      <span>Superadmin</span>
+                  </div>
+
+                  <img role="button" @fadeInOut *ngIf="collapsed" class="logout" src="../../assets/ic_round-log-out.svg" alt="logout">
+              </div>
+
+  </div>
+  <ul class="sidenav-nav">
+    <li class="sidenav-nav-item" *ngFor="let data of navData">
+      <a class="sidenav-nav-link" [routerLink]="[data.routeLink]" routerLinkActive="active"
+         [routerLinkActiveOptions]="{exact: true}">
+        <i class="sidenav-link-icon" [class]="data.icon"></i>
+
+        <span class="sidenav-link-text" @fadeInOut *ngIf="collapsed">
+                    {{data.label}}
+                </span>
+      </a>
+      <ul *ngIf="collapsed && data.submenuLevel1 && data.submenuLevel1.length > 0"
+          [ngStyle]="{'margin-left': '80px'}">
+        <li *ngFor="let sub1 of data.submenuLevel1">
+          <a [routerLink]="[sub1.routeLink]">
+            <span>{{sub1.label}}</span>
+          </a>
+
+          <ul *ngIf="sub1.submenuLevel2 && sub1.submenuLevel2.length > 0" [ngStyle]="{'margin-left': '15px'}">
+            <li *ngFor="let sub2 of sub1.submenuLevel2">
+              <a [routerLink]="[sub2.routeLink]">
+                <span>{{sub2.label}}</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>

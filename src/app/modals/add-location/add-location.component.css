@@ -52,3 +52,11 @@ form input {
 }
 .mat-form-field:focus{
     background-color: white !important;}
+
+    .example-section {
+      margin: 12px 0;
+    }
+
+  #expand_section{
+   display: block;
+  }

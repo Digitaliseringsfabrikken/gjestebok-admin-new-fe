@@ -6,6 +6,7 @@ import { ClientDashboardComponent } from './client-dashboard/client-dashboard.co
 import { AdminClientsComponent } from './admin-clients/admin-clients.component';
 import { WorkplacesComponent } from './workplaces/workplaces/workplaces.component';
 import { LocationsComponent } from './workplaces/locations/locations.component';
+import { WizardComponent } from './workplaces/wizard/wizard.component';
 
 const routes: Routes = [
   { path: '', 
@@ -34,6 +35,10 @@ const routes: Routes = [
   {
     path: 'workplace-locations',
     component: LocationsComponent
+  },
+  {
+  path: 'workplace-wizard',
+  component: WizardComponent
   }
 ];
 

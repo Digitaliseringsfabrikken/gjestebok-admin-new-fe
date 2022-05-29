@@ -1,6 +1,7 @@
 .navbar_gjestebok{
     padding: 20px;
     background-color: white;
+  box-shadow: 0px 2px 4px -1px rgba(0, 48, 96, 0.1), 0px 5px 4px rgba(0, 48, 96, 0.04), 0px 1px 10px rgba(0, 48, 96, 0.02);
 }
 .header_logo{
     line-height: 36px;

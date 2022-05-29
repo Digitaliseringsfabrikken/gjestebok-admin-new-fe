@@ -32,9 +32,10 @@ import { CompaniesComponent } from './workplaces/companies/companies.component';
 import {MatIconModule} from '@angular/material/icon';
 import { EmployeesComponent } from './workplaces/employees/employees.component';
 import { AddLocationComponent } from './modals/add-location/add-location.component';
-
-
-
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { WizardComponent } from './workplaces/wizard/wizard.component';
+import { RouterModule } from "@angular/router";
+import { BodyComponent } from './body/body.component';
 
 
 @NgModule({
@@ -54,8 +55,10 @@ import { AddLocationComponent } from './modals/add-location/add-location.compone
     LocationsComponent,
     CompaniesComponent,
     EmployeesComponent,
-    AddLocationComponent
-   
+    AddLocationComponent,
+    WizardComponent,
+    BodyComponent
+
   ],
   imports: [
     BrowserModule,
@@ -76,8 +79,10 @@ import { AddLocationComponent } from './modals/add-location/add-location.compone
     MatDialogModule,
     MatTabsModule,
     MatIconModule,
-    ReactiveFormsModule
-    
+    ReactiveFormsModule,
+    MatCheckboxModule,
+    RouterModule
+
 
 
   ],

@@ -1,3 +1,7 @@
+.recently_bg h5{
+font-weight: 600;
+color: #003060;
+}
 .overall{
     margin-bottom: 50px;
 }
@@ -96,10 +100,11 @@ hr{
 /* Recently boxes */
 
 .recently_bg{
+    position: relative;
     background-color: white;
     padding: 20px;
     border-radius: 8px;
-    border-radius: 1px solid #DDE4EE;
+    border: 1px solid #DDE4EE;
     margin: 36px 0 50px 0;
 }
 .recently_box{
@@ -161,4 +166,22 @@ hr{
 }  
 .workplaces_overview h2{
     color: #1560BD;
+}
+.background_img img{
+    position: absolute;
+    right: 0;
+}
+.wizard{
+    bottom: 36px;
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+}
+.recently_bg p{
+font-weight: 400;
+font-size: 14px;
+line-height: 16px;
+color: #1560BD;
 }

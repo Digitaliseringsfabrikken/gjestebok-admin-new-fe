@@ -3,6 +3,7 @@ import { FormArray, FormBuilder, FormControl, FormGroup, Validators, ReactiveFor
 import {Subscription} from 'rxjs';
 import {PacketService} from '../../packet.service';
 import {MatSelectModule} from '@angular/material/select';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 
   // Time zone select
@@ -18,6 +19,14 @@ import {MatSelectModule} from '@angular/material/select';
   styleUrls: ['./add-location.component.css']
 })
 export class AddLocationComponent implements OnInit {
+
+  isShown: boolean = false ; // hidden by default
+
+toggleShow() {
+
+this.isShown = ! this.isShown;
+
+}
 
   //Time zone select
   foods: Food[] = [
@@ -58,8 +67,6 @@ export class AddLocationComponent implements OnInit {
 
 
   contact = {
-    firstName: 'Harry',
-    lastName: 'Potter',
     contacts: [{ phoneNo: '', emailAddr: '' }]
   } 
   
@@ -122,5 +129,5 @@ export class AddLocationComponent implements OnInit {
     console.log('user is added')
   
   }
-
+ 
 }

@@ -36,6 +36,8 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { WizardComponent } from './workplaces/wizard/wizard.component';
 import { RouterModule } from "@angular/router";
 import { BodyComponent } from './body/body.component';
+import {MatStepperModule} from '@angular/material/stepper';
+
 
 
 @NgModule({
@@ -81,7 +83,8 @@ import { BodyComponent } from './body/body.component';
     MatIconModule,
     ReactiveFormsModule,
     MatCheckboxModule,
-    RouterModule
+    RouterModule,
+    MatStepperModule
 
 
 

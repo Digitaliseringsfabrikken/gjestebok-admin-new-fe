@@ -17,15 +17,31 @@ import {MatStepperModule} from '@angular/material/stepper';
 })
 export class WizardComponent implements OnInit {
 
+  isShow = true;
+  display = false;
+
+  manualEmployee() {
+    this.display = true;
+    this.isShow = false;
+  }
+
   myusername: string = "";
+  companyname : string = "";
+  employeenumber : string = "";
 
   blurEvent(event: any){
     this.myusername = event.target.value;
-
+  }
+  blurEventt(event: any){
+    this.companyname = event.target.value;
+  }
+  blurEventtt(event: any){
+    this.employeenumber = event.target.value;
   }
 
   firstFormGroup!: FormGroup;
   secondFormGroup!: FormGroup;
+  thirdFormGroup! : FormGroup;
 
   constructor(private _formBuilder: FormBuilder) {}
 
@@ -36,5 +52,11 @@ export class WizardComponent implements OnInit {
     this.secondFormGroup = this._formBuilder.group({
       secondCtrl: ['', Validators.required],
     });
+    this.thirdFormGroup = this._formBuilder.group({
+      thirdCtrl: ['', Validators.required],
+    });
   }
+
+
+
 }

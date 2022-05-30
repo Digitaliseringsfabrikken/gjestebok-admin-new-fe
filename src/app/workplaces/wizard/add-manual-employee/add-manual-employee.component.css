@@ -326,3 +326,13 @@ h3{
   width: 100%;
   margin-bottom: 30px;
 }
+.button_add{
+  width:100%;
+  display:block;
+}
+.blue_button{
+  float:right;
+}
+.hidden-s{
+  visibility:hidden;
+}

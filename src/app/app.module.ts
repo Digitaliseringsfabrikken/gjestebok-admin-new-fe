@@ -37,7 +37,7 @@ import { WizardComponent } from './workplaces/wizard/wizard.component';
 import { RouterModule } from "@angular/router";
 import { BodyComponent } from './body/body.component';
 import {MatStepperModule} from '@angular/material/stepper';
-
+import { AddManualEmployeeComponent } from "./workplaces/wizard/add-manual-employee/add-manual-employee.component";
 
 
 @NgModule({
@@ -59,7 +59,8 @@ import {MatStepperModule} from '@angular/material/stepper';
     EmployeesComponent,
     AddLocationComponent,
     WizardComponent,
-    BodyComponent
+    BodyComponent,
+    AddManualEmployeeComponent
 
   ],
   imports: [

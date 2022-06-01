@@ -1,7 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {FormBuilder, FormControl, FormGroup, Validators, FormArray} from '@angular/forms';
 import {STEPPER_GLOBAL_OPTIONS} from '@angular/cdk/stepper';
 import {MatStepperModule} from '@angular/material/stepper';
+import { HttpClient } from '@angular/common/http';
 
 
 @Component({
@@ -16,6 +17,8 @@ import {MatStepperModule} from '@angular/material/stepper';
   ],
 })
 export class WizardComponent implements OnInit {
+
+  imageSrc: string = '';
 
   isShow = true;
   display = false;
@@ -43,7 +46,9 @@ export class WizardComponent implements OnInit {
   secondFormGroup!: FormGroup;
   thirdFormGroup! : FormGroup;
 
-  constructor(private _formBuilder: FormBuilder) {}
+
+
+  constructor(private _formBuilder: FormBuilder, private formBuilder: FormBuilder, private http: HttpClient) {}
 
   ngOnInit() {
     this.firstFormGroup = this._formBuilder.group({
@@ -57,6 +62,59 @@ export class WizardComponent implements OnInit {
     });
   }
 
+//FILE UPLOAD
+url="../assets/logo.png";
+  onSelect(event: any) {
+    let fileType = event.target.files[0].type;
+    if (fileType.match(/image\/*/)) {
+      let reader = new FileReader();
+      reader.readAsDataURL(event.target.files[0]);
+      reader.onload = (event: any) => {
+        this.url = event.target.result;
+      };
+    } else {
+      window.alert('Please select correct image format');
+    }
+  }
 
+//  ADD MORE FIELDS "Entrances on step 1"
+//
+//   contact = {
+//
+//     contacts: [{ firstCtrl: '' }]
+//   }
+//
+//   form: FormGroup = this.formBuilder.group({
+//
+//     contacts: this.buildContacts(this.contact.contacts)
+//   });
+//
+//
+//   get contacts(): FormArray {
+//     return this.form.get('contacts') as FormArray;
+//   }
+//
+//   buildContacts(contacts: {firstCtrl: string; }[] = []) {
+//     return this.formBuilder.array(contacts.map(contact => this.formBuilder.group(contact)));
+//   }
+//
+//   addContactField() {
+//     this.contacts.push(this.formBuilder.group({firstCtrl: null}))
+//   }
+//
+//   removeContactField(index: number): void {
+//     if (this.contacts.length > 1) this.contacts.removeAt(index);
+//     else this.contacts.patchValue([{firstCtrl: null}]);
+//   }
+//
+//   submit(value: any): void {
+//     console.log(value)
+//   }
+//
+//   reset(): void {
+//     this.form.reset();
+//     this.contacts.clear();
+//     this.addContactField();
+//   }
 
 }

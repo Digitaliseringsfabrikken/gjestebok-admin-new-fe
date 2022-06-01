@@ -38,6 +38,7 @@ import { RouterModule } from "@angular/router";
 import { BodyComponent } from './body/body.component';
 import {MatStepperModule} from '@angular/material/stepper';
 import { AddManualEmployeeComponent } from "./workplaces/wizard/add-manual-employee/add-manual-employee.component";
+import { STEPPER_GLOBAL_OPTIONS } from "@angular/cdk/stepper";
 
 
 @NgModule({
@@ -70,7 +71,7 @@ import { AddManualEmployeeComponent } from "./workplaces/wizard/add-manual-emplo
     MatSelectModule,
     AgGridModule.withComponents([]),
     HttpClientModule,
-    // NgbModule,
+    // NgModule,
     ReactiveFormsModule,
     FormsModule,
     MatTableModule,

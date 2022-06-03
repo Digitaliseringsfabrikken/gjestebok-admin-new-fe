@@ -8,8 +8,10 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
   clients:any = []
   selectVal:string = "";
+  user:any
   constructor() { 
     this.clients = ['norautron', 'test2', 'test3']
+    this.user=false
   }
 
   ngOnInit(): void {

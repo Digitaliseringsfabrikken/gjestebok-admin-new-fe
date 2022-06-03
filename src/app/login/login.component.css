@@ -12,7 +12,7 @@
 } */
 html,body{
     background: #F2F7FF !important;
-    height: 150vh !important;
+    /* height: 150vh !important; */
     width: 100%;
     position: relative;
 }

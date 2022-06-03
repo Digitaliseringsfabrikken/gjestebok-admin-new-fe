@@ -1,5 +1,5 @@
 
-<div class="sidenav" [ngClass]="collapsed ? 'sidenav-collapsed': ''">
+<div class="sidenav" [ngClass]="collapsed ? 'sidenav-collapsed': ''" *ngIf="user">
   <div class="logo-container">
     <div class="user_card" role="button" (click)="toggleCollapse()">
                   <img class="user_img" src="../../assets/image 18.png" alt="user img">

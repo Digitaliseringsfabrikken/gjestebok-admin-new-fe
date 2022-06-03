@@ -45,6 +45,7 @@ export class SidebarComponent implements OnInit {
   collapsed = false;
   screenWidth = 0;
   navData = navbarData;
+  user:any
 
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {
@@ -57,6 +58,7 @@ export class SidebarComponent implements OnInit {
 
   ngOnInit(): void {
     this.screenWidth = window.innerWidth;
+    this.user=false
   }
 
   toggleCollapse(): void {

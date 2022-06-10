@@ -17,9 +17,12 @@ const httpOptions = {
       onRefresh = new Subject();
       constructor(private http: HttpClient) {}
   
-      private apiPartialEndpoint = 'https://75b040bf-c2ab-4e2d-8f32-14bebf70e09b.mock.pstmn.io/%20';
+      private apiPartialEndpoint = 'http://127.0.0.1:8000';
      
       getAllClients(){
         return this.http.get(this.apiPartialEndpoint + `/v1/home`).pipe();
+      }
+      getUser(data: any){
+        return this.http.get(this.apiPartialEndpoint + `/api/user`, data).pipe();
       }
     }

@@ -16,6 +16,7 @@ import { Client } from 'src/app/models/clients.model';
 import { MatPaginator } from '@angular/material/paginator';
 import {MatDialog, MatDialogModule ,  MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { DeleteClientComponent } from 'src/app/modals/delete-client/delete-client.component';
+import { AddEmployeeComponent } from 'src/app/modals/add-employee/add-employee.component';
 
 
 @Component({
@@ -33,21 +34,21 @@ export class EmployeesComponent implements OnInit, AfterViewInit {
 
 // Final Popup
 openDialog(){
-  this.dialog.open(EmployeesComponent, {
-    width:'50%'
+  this.dialog.open(AddEmployeeComponent, {
+    width:'60%'
   });
 }
 openEditDialog(element:any){
   console.log('heree edit', element)
-  this.dialog.open(EmployeesComponent, {
-    width:'50%'
+  this.dialog.open(AddEmployeeComponent, {
+    width:'60%'
   });
 }
 
 openDeleteDialog(element:any){
   // console.log('heree delete', element)
   this.dialog.open(DeleteClientComponent, {
-    width:'50%'
+    width:'60%'
   });
 }
 

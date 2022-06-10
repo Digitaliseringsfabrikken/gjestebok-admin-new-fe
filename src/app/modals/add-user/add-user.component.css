@@ -1,0 +1,34 @@
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  
+  }
+  .example-full-width {
+    width: 100%;
+  }
+  
+  td {
+    padding-right: 8px;
+  }
+  table tr td{
+      padding: 0 !important;
+  }
+.w_70{
+  width: 50%;
+}
+.w_30{
+  width: 50%;
+  margin-left: 16px;
+}
+.d_flex{
+  display: flex;
+}
+.border_form{
+  border-top: 1px solid #DDE4EE;
+  padding-top: 30px;
+  
+}
+.right_buttons{
+  float: right;
+}

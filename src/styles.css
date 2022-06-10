@@ -488,5 +488,34 @@ td.mat-cell {
 .mt30{
     margin-top: 30px !important;
 }
+/* Select dropdoen style */
+.mat-select-panel{
+    border-radius: 4px !important;
+    border: 1px solid #DDE4EE;
+    border-top-style: none;
+  }
+  
+  .mat-form-field-appearance-outline .mat-form-field-outline-start{
+    border-radius: 0px !important;
+    border: 1px solid #DDE4EE !important;
+    border-right-style: none !important;
+  }
+  
+  .mat-form-field-appearance-outline .mat-form-field-outline-end{
+    border-radius: 0px !important;
+    border: 1px solid #DDE4EE !important;
+    border-left-style: none !important;
+  }
+  
+  .mat-select-panel ng-animating {
+    visibility: hidden;
+  }
 
-
+  /* PopUp Dialog Style */
+  .mat-dialog-container{
+      height: auto !important;
+      overflow-y: scroll;
+  }
+  .mat-form-field-flex{
+      background-color: white !important;
+  }

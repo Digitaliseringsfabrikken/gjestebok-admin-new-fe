@@ -1,0 +1,80 @@
+<h4 class="modal_title">Add User</h4>
+<form [formGroup]="formGroupAdd">
+  <div class="gjestebok_modal d_flex form_border">
+  <div class="w_70">
+   
+     <div class="">
+        <label>Client id</label> 
+        <mat-form-field class="example-full-width" appearance="fill">
+          <input matInput formControlName="client_id" placeholder="Client id">
+        </mat-form-field>
+
+        <label>Name</label> 
+        <mat-form-field class="example-full-width" appearance="fill">
+          <input matInput formControlName="name" placeholder="Name">
+        </mat-form-field>
+      
+      <label>Email</label> 
+      <mat-form-field class="example-full-width" appearance="fill">
+          <!-- <mat-label>Email</mat-label> -->
+          <input type="email" matInput formControlName="email" placeholder="example@email.com">
+          <!-- email.invalid && !email.hasError('required') -->
+          <!-- <mat-error *ngIf="">
+            Please enter a valid email address
+          </mat-error>
+          <mat-error *ngIf="email.hasError('required')">
+            Email is <strong>required</strong>
+          </mat-error> -->
+        </mat-form-field>
+
+      
+      <label>Role</label> 
+      <mat-form-field class="example-full-width" appearance="fill">
+          <input matInput formControlName="role" placeholder="Role">
+        </mat-form-field>
+
+        <label>Is active</label> 
+      <mat-form-field class="example-full-width" appearance="fill">
+          <input matInput formControlName="is_active" placeholder="Is active">
+        </mat-form-field>
+
+       
+      </div>
+     
+    </div>
+    <div class="w_30">  
+        <label>Is intercom</label> 
+        <mat-form-field class="example-full-width" appearance="fill">
+            <input matInput formControlName="is_intercom" placeholder="Is intercom">
+          </mat-form-field>
+  
+          <label>Email verified at</label> 
+        <mat-form-field class="example-full-width" appearance="fill">
+            <input matInput formControlName="email_verified_at" placeholder="Email verified at">
+          </mat-form-field>
+  
+          <label>Created at</label> 
+        <mat-form-field class="example-full-width" appearance="fill">
+            <input matInput formControlName="created_at" placeholder="Created at">
+          </mat-form-field>
+  
+          <label>Updated at</label> 
+          <mat-form-field class="example-full-width" appearance="fill">
+              <input matInput formControlName="updated_at" placeholder="Updated at">
+            </mat-form-field>
+  
+            <label>Deleted at</label> 
+            <mat-form-field class="example-full-width" appearance="fill">
+                <input matInput formControlName="deleted_at" placeholder="Deleted at">
+              </mat-form-field>
+    </div>
+  </div>
+  <div class="border_form">
+    <div class="right_buttons">
+      <button class="white_button" mat-dialog-close="Cancel">Cancel</button>
+      <button style="margin-left:20px;" class="savebtn blue_button" (click)="saveHandler()">Create Client</button>
+    </div> 
+</div>
+    </form>
+    
+

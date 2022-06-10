@@ -32,7 +32,6 @@ export class AdminClientsComponent implements OnInit, AfterViewInit  {
   constructor(private packetService: PacketService, private excelService:ExcelService, public dialog: MatDialog){}
 
 
-  // Final Popup
 openDialog(){
   this.dialog.open(AddClientComponent, {
     width:'50%'
@@ -55,15 +54,6 @@ openDeleteDialog(element:any){
     width:'50%'
   });
 }
-
-  // @ViewChild(MatSort, {static: false})
-  // set sort(value: MatSort) {
-  //   this.rowData.sort = value;
-  // }
-  // @ViewChild(MatSort, {static: false})
-  // set sort(value: MatSort) {
-  //   this.rowData.sort = value;
-  // }
 
   @ViewChild(MatSort)
   sort!: MatSort;
@@ -117,79 +107,5 @@ openDeleteDialog(element:any){
  onBtnExport() {
   this.gridApi.exportDataAsCsv();
 }
-
-
-//popup
-// openDialog(): void {
-//   const dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
-//     width: '250px',
-//     data: {name: this.name, animal: this.animal},
-//   });
-
-//   dialogRef.afterClosed().subscribe(result => {
-//     console.log('The dialog was closed');
-//     this.animal = result;
-//   });
-// }
-// }
-
-// @Component({
-// selector: 'dialog-overview-example-dialog',
-// templateUrl: 'dialog-overview-example-dialog.html',
-// })
-// export class DialogOverviewExampleDialog {
-// constructor(
-//   public dialogRef: MatDialogRef<DialogOverviewExampleDialog>,
-//   @Inject(MAT_DIALOG_DATA) public data: DialogData,
-// ) {}
-
-
-
-
- //popup
-//  open(content:any) {
-//   this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result:any) => {
-//     this.closeResult = `Closed with: ${result}`;
-//   }, (reason) => {
-//     this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
-//   });
-// }
-
-// private getDismissReason(reason: any): string {
-//   if (reason === ModalDismissReasons.ESC) {
-//     return 'by pressing ESC';
-//   } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
-//     return 'by clicking on a backdrop';
-//   } else {
-//     return  `with: ${reason}`;
-//   }
-// }
-// public addHandler() {
-//   this.formGroupAdd = new FormGroup({
-//     'firstName': new FormControl(''),
-//     'lastName': new FormControl(''),
-//     'username': new FormControl(''),
-//     'password': new FormControl(''),
-//     'location': new FormControl('')
-//   });
-// }
-// public saveHandler() {
-//   this.subscriptions.add(
-  
-//     this.packetService.createUser(this.formGroupAdd.value)
-//       .pipe(first())
-//       .subscribe(data => {
-//           this.user = data;
-//           // console.log('success', this.user);
-//           this.formGroupAdd.reset();
-//           this.packetService.onCompleteRefresh();
-//           window.location.reload();
-//         },
-//         error => {
-//           console.log('error while creating a new user');
-//         })
-//         );
-// }
-
 
 }

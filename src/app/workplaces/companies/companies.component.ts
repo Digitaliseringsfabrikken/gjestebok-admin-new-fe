@@ -16,6 +16,7 @@ import { Client } from 'src/app/models/clients.model';
 import { MatPaginator } from '@angular/material/paginator';
 import {MatDialog, MatDialogModule ,  MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { DeleteClientComponent } from 'src/app/modals/delete-client/delete-client.component';
+import { AddCompaniesComponent } from 'src/app/modals/add-companies/add-companies.component';
 
 
 @Component({
@@ -33,13 +34,13 @@ export class CompaniesComponent implements OnInit, AfterViewInit {
 
     // Final Popup
 openDialog(){
-  this.dialog.open(CompaniesComponent, {
+  this.dialog.open(AddCompaniesComponent, {
     width:'50%'
   });
 }
 openEditDialog(element:any){
   console.log('heree edit', element)
-  this.dialog.open(CompaniesComponent, {
+  this.dialog.open(AddCompaniesComponent, {
     width:'50%'
   });
 }

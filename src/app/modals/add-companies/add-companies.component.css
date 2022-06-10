@@ -1,0 +1,225 @@
+.c_pointer{
+  cursor: pointer;
+}
+
+.mat-horizontal-stepper-header-container{
+  background: #F5F7FA !important;
+  margin-bottom: 20px;
+}
+.mat-form-field{
+  display: block !important;
+}
+.entrance.white_button{
+  display: inline-block;
+  float: right;
+}
+.mat-form-field-wrapper{
+  margin-bottom: 15px;
+  background-color:white !important;
+}
+.mat-form-field-flex{
+  background-color: white;
+}
+
+.form_bck{
+  background-color:white !important;
+  /*margin-top: 30px;*/
+  /*padding:20px;*/
+  /*border: 1px solid #DDE4EE;*/
+  border-radius: 8px;
+}
+.right_btn{
+  margin-top: 20px;
+  float: right;
+  display:inline-block;
+  padding:0 !important;
+}
+.blue_button{
+  margin-left: 15px;
+}
+
+.left_btn{
+  margin-top: 20px;
+}
+h3{
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 32px;
+  color: #003060;
+  margin-bottom: 20px;
+}
+
+.blue_button{
+  float:right;
+}
+
+.search{
+  padding: 16px 14px 14px 45px !important;
+  border: 1px solid #DDE4EE;
+  border-radius: 4px;
+  width: 356px !important;
+  background-color: #ffffff;
+  box-sizing: border-box !important;
+  color: #1252A1;
+  font-size: 16px !important;
+  line-height: 20px !important;
+}
+.search_icon{
+  position: absolute;
+  top: 13px;
+  left: 16px;
+  color: #97ACCB
+}
+
+.flex_contaienr{
+  display: flex;
+  flex-wrap: wrap;
+  overflow-x: hidden;
+  height: 200px;
+  overflow-y: scroll;
+}
+.flex_contaienr .example-margin{
+  width: 100px;
+  margin-right: 105px;
+  margin-bottom: 20px;
+}
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+
+}
+.example-full-width {
+  width: 100%;
+}
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+
+}
+.example-full-width {
+  width: 100%;
+}
+
+td {
+  padding-right: 8px;
+}
+table tr td{
+  padding: 0 !important;
+}
+.w100{
+  width: 100%;
+}
+.w_70{
+  width: 70%;
+}
+.w_30{
+  width: 30%;
+  margin-left: 16px;
+}
+.d_flex{
+  display: flex;
+}
+.border_form{
+  border-top: 1px solid #DDE4EE;
+  padding-top: 30px;
+
+}
+.right_buttons{
+  float: right;
+}
+form input {
+  display: block;
+  width: 100%;
+  padding: 16px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  border: 1px solid #DDE4EE;
+  background: 0 none;
+  outline: none;
+  color: #1252A1;
+  /* background-color: #FAFCFE; */
+  font-family: 'Roboto', sans-serif !important;
+}
+.mat-form-field:focus{
+  background-color: white !important;}
+
+.example-section {
+  margin: 12px 0;
+}
+
+#expand_section{
+  display: block;
+}
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+
+}
+.example-full-width {
+  width: 100%;
+}
+
+td {
+  padding-right: 8px;
+}
+table tr td{
+  padding: 0 !important;
+}
+.w100{
+  width: 100%;
+}
+.w_70{
+  width: 70%;
+}
+.w_30{
+  width: 30%;
+  margin-left: 16px;
+}
+.d_flex{
+  display: flex;
+}
+.border_form{
+  /*border-top: 1px solid #DDE4EE;*/
+  padding-top: 30px;
+
+}
+.right_buttons{
+  float: right;
+}
+
+.mat-form-field:focus{
+  background-color: white !important;}
+
+.example-section {
+  margin: 12px 0;
+}
+
+#expand_section{
+  display: block;
+}
+input {
+  background-color: white !important;
+}
+.mat-form-field-flex{
+  background-color: white !important;
+}
+.paragraph_popup{
+  margin: 20px 0;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: #003060;
+}
+.border_form {
+  border: 1px solid #DDE4EE;
+}
+::ng-deep .mat-checkbox-ripple .mat-ripple-element {
+  background-color: #1560BD !important;
+}
+::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-background {
+  background-color: #1560BD !important;
+}

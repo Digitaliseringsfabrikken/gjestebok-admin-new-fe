@@ -3,18 +3,18 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            
 
-                <label>Location name</label> 
+
+                <label>Location name</label>
                             <mat-form-field class="example-full-width" appearance="fill">
                               <input matInput formControlName="name" placeholder="Digitaliseringsfabrikken">
                             </mat-form-field>
-                           
+
         </div>
         <div class="col-md-7">
-           
 
-                <label>Location details</label> 
+
+                <p>Location details</p>
                 <div class="form_border">
                     <label>Street</label>
                     <mat-form-field class="example-full-width" appearance="fill">
@@ -42,73 +42,72 @@
                           <div class="col-md-6">
                             <label>Time zone</label>
                             <mat-form-field appearance="fill">
-                                <mat-label>Favorite Food</mat-label>
-                                <mat-select [formControl]="foodControl" name="food">
-                                  <mat-option>None</mat-option>
-                                  <mat-option *ngFor="let food of foods" [value]="food.value">
-                                    {{food.viewValue}}
-                                  </mat-option>
-                                </mat-select>
-                              </mat-form-field>
+                              <mat-select>
+                                <mat-option>None</mat-option>
+                                <mat-option *ngFor="let time of times" [value]="time">{{time}}</mat-option>
+                              </mat-select>
+                            </mat-form-field>
                           </div>
                       </div>
 
 
-                    
+
                 </div>
         </div>
-        
+
         <div class="col-md-5">
-          
-                <fieldset>
-                    <legend>Entrances</legend>
-                    <ng-container formArrayName="contacts" *ngFor="let contact of contacts.controls; index as i">
-                      <ng-container [formGroupName]="i">
-                       
-                        <input matInput formControlName="name" placeholder="Digitaliseringsfabrikken">
-                
-                        <button class="btn-remove" type="button" (click)="removeContactField(i)">x</button>
-                
-                        <br><br>
-                      </ng-container>
-                    </ng-container>
-                
-                    <button class="btn-add" type="button" (click)="addContactField()">Add</button>
-                  </fieldset>
-         
-            
+            <p>Location entrances</p>
+
+          <mat-form-field *ngFor="let contact of contacts?.controls; let i = index" class="example-full-width add_entrance" appearance="fill">
+            <label>Entrance {{i + 1}}</label>
+            <input matInput formControlName="name" placeholder="Glückstads gate 149" style="width:92%;">
+            <button class="btn-remove" type="button" (click)="removeContactField(i)">x</button>
+
+          </mat-form-field>
+          <button class="btn-add white_button " (click)="addContactField()">Add another entrance</button>
+
         </div>
     </div>
 </div>
 <div class="container">
   <div class="row">
     <div  class="col-md-12 expand_location ">
-      <section id="expand_section" class="example-section ">
-        <mat-checkbox class="example-margin">Check me!</mat-checkbox>
-      </section>
+      <div class="close_icon" type="button" (click)="hideSection()" *ngIf="hideIcon">
+        <mat-icon>close</mat-icon>
+      </div>
 
+      <div class="hidden_sectionn" *ngIf="isShown">
+        <h5>Companies in this location</h5>
+        <div class="flex_contaienr hidden_section">
+          <mat-checkbox color="primary" class="example-margin">Headquarters Oslo</mat-checkbox>
+          <mat-checkbox color="primary"  class="example-margin">Main office Copenhagen</mat-checkbox>
+          <mat-checkbox color="primary"  class="example-margin">CHomesourcing Serbia!</mat-checkbox>
+          <mat-checkbox color="primary"  class="example-margin">CHomesourcing Serbia</mat-checkbox>
+          <mat-checkbox color="primary"  class="example-margin">Headquarters Oslo</mat-checkbox>
+          <mat-checkbox color="primary"  class="example-margin">Homesourcing Serbia</mat-checkbox>
+          <mat-checkbox color="primary"  class="example-margin">Homesourcing Serbia</mat-checkbox>
+          <mat-checkbox color="primary"  class="example-margin">Main office Copenhagen</mat-checkbox>
+          <mat-checkbox color="primary"  class="example-margin">Headquarters Oslo</mat-checkbox>
+          <mat-checkbox color="primary"  class="example-margin">Homesourcing Serbia</mat-checkbox>
+          <mat-checkbox color="primary"  class="example-margin">Headquarters Oslo</mat-checkbox>
+          <mat-checkbox color="primary"  class="example-margin">Headquarters Oslo</mat-checkbox>
+        </div>
+      </div>
+
+
+      <hr>
       <div class="right_buttons">
         <button class="white_button" mat-dialog-close="Cancel">Cancel</button>
         <button style="margin-left:20px;" class="savebtn blue_button" (click)="saveHandler()">Create Client</button>
-      </div> 
+      </div>
       <div class="left_btn">
-        <button class="white_button" id="expand" >Add companies to location</button>
+        <button class="white_button" (click)="toggleShow()" type="checkbox" id="expand" *ngIf="hideBtn" >Add companies to location</button>
       </div>
 
+
+
     </div>
+
   </div>
 </div>
 </form>
-
-  
-<script>
-  const targetDiv = document.getElementById("expand_section");
-  const btn = document.getElementById("expand");
-  btn.onclick = function () {
-    if (targetDiv.style.display !== "none") {
-      targetDiv.style.display = "none";
-    } else {
-      targetDiv.style.display = "block";
-    }
-  };
-</script>

@@ -11,7 +11,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { AdminClientsComponent } from './admin-clients/admin-clients.component';
 import { AgGridModule } from 'ag-grid-angular';
-import { HttpClientModule,  HTTP_INTERCEPTORS} from '@angular/common/http';
+import { HttpClientModule,  HTTP_INTERCEPTORS, HttpClientXsrfModule} from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
@@ -39,6 +39,16 @@ import { BodyComponent } from './body/body.component';
 import {MatStepperModule} from '@angular/material/stepper';
 import { AddManualEmployeeComponent } from "./workplaces/wizard/add-manual-employee/add-manual-employee.component";
 import { STEPPER_GLOBAL_OPTIONS } from "@angular/cdk/stepper";
+import { AddCompaniesComponent } from './modals/add-companies/add-companies.component';
+import { AddEmployeeComponent } from './modals/add-employee/add-employee.component';
+import { DevicesComponent } from './devices/devices.component';
+import { AddDevicesComponent } from './modals/add-devices/add-devices.component';
+import { SanctumInterceptor } from './_helpers/sanctum.interceptor';
+import { UsersComponent } from './users/users.component';
+import { AddUserComponent } from './modals/add-user/add-user.component';
+import { EditUserComponent } from './modals/edit-user/edit-user.component';
+import { DeleteUserComponent } from './modals/delete-user/delete-user.component';
+
 
 
 @NgModule({
@@ -61,7 +71,15 @@ import { STEPPER_GLOBAL_OPTIONS } from "@angular/cdk/stepper";
     AddLocationComponent,
     WizardComponent,
     BodyComponent,
-    AddManualEmployeeComponent
+    AddManualEmployeeComponent,
+    AddCompaniesComponent,
+    AddEmployeeComponent,
+    DevicesComponent,
+    AddDevicesComponent,
+    UsersComponent,
+    AddUserComponent,
+    EditUserComponent,
+    DeleteUserComponent
 
   ],
   imports: [
@@ -71,6 +89,7 @@ import { STEPPER_GLOBAL_OPTIONS } from "@angular/cdk/stepper";
     MatSelectModule,
     AgGridModule.withComponents([]),
     HttpClientModule,
+    HttpClientXsrfModule,
     // NgModule,
     ReactiveFormsModule,
     FormsModule,
@@ -91,7 +110,10 @@ import { STEPPER_GLOBAL_OPTIONS } from "@angular/cdk/stepper";
 
 
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: SanctumInterceptor, multi: true },
+    // { provide: HttpXsrfTokenExtractor, useClass: HttpXsrfCookieExtractor }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

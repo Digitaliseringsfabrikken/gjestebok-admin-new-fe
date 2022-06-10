@@ -6,11 +6,7 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 
 
-  // Time zone select
-  interface Food {
-    value: string;
-    viewValue: string;
-  }
+
 
 
 @Component({
@@ -20,56 +16,69 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 })
 export class AddLocationComponent implements OnInit {
 
+  //Show a section on click
   isShown: boolean = false ; // hidden by default
+  //Hide Button onclick
+  hideBtn: boolean = true;
+
+//  Show close icon onclick
+  hideIcon: boolean = false;
 
 toggleShow() {
-
 this.isShown = ! this.isShown;
-
+this.hideBtn = ! this.hideBtn;
+this.hideIcon = !this.hideIcon;
 }
+  hideSection(){
+  this.isShown = ! this.hideIcon;
+  this.hideIcon =! this.hideIcon;
+  this.hideBtn = ! this.hideIcon;
+  }
+
+
+
 
   //Time zone select
-  foods: Food[] = [
-    {value: 'test', viewValue: '(GMT +00:00) GMT'},
-    {value: 'floor(Math. random() * (max - min + 1)) + min', viewValue: '(GMT +00:00) UTC'},
-    {value: 'floor(Math. random() * (max - min + 1)) + min', viewValue: '(GMT +1:00) ECT'},
-    {value: 'floor(Math. random() * (max - min + 1)) + min', viewValue: '(GMT +2:00) EET'},
-    {value: 'floor(Math. random() * (max - min + 1)) + min', viewValue: '(GMT +2:00) ART'},
-    {value: 'floor(Math. random() * (max - min + 1)) + min', viewValue: '(GMT +3:00) EAT'},
-    {value: 'floor(Math. random() * (max - min + 1)) + min', viewValue: '(GMT +3:30) MET'},
-    {value: 'floor(Math. random() * (max - min + 1)) + min', viewValue: '(GMT +4:00) NET'},
-    {value: 'floor(Math. random() * (max - min + 1)) + min', viewValue: '(GMT +5:00) PLT'},
-    {value: 'floor(Math. random() * (max - min + 1)) + min', viewValue: '(GMT +5:30) IST'},
-    {value: 'floor(Math. random() * (max - min + 1)) + min', viewValue: '(GMT +6:00) BST'},
-    {value: 'floor(Math. random() * (max - min + 1)) + min', viewValue: '(GMT +7:00) VST'},
-    {value: 'floor(Math. random() * (max - min + 1)) + min', viewValue: '(GMT +8:00) CTT'},
-    {value: 'floor(Math. random() * (max - min + 1)) + min', viewValue: '(GMT +9:00) JST'},
-    {value: 'floor(Math. random() * (max - min + 1)) + min', viewValue: '(GMT +9:30) ACT'},
-    {value: 'floor(Math. random() * (max - min + 1)) + min', viewValue: '(GMT +10:00) AET'},
-    {value: 'floor(Math. random() * (max - min + 1)) + min', viewValue: '(GMT +11:00) SST'},
-    {value: 'floor(Math. random() * (max - min + 1)) + min', viewValue: '(GMT +12:00) NST'},
-    {value: 'floor(Math. random() * (max - min + 1)) + min', viewValue: '(GMT -11:00) MIT'},
-    {value: 'floor(Math. random() * (max - min + 1)) + min', viewValue: '(GMT -10:00) HST'},
-    {value: 'floor(Math. random() * (max - min + 1)) + min', viewValue: '(GMT -9:00) AST'},
-    {value: 'floor(Math. random() * (max - min + 1)) + min', viewValue: '(GMT -8:00) PST'},
-    {value: 'floor(Math. random() * (max - min + 1)) + min', viewValue: '(GMT -7:00) PNT'},
-    {value: 'floor(Math. random() * (max - min + 1)) + min', viewValue: '(GMT -7:00) MST'},
-    {value: 'floor(Math. random() * (max - min + 1)) + min', viewValue: '(GMT -6:00) CST'},
-    {value: 'floor(Math. random() * (max - min + 1)) + min', viewValue: '(GMT -5:00) EST'},
-    {value: 'floor(Math. random() * (max - min + 1)) + min', viewValue: '(GMT -5:00) IET'},
-    {value: 'floor(Math. random() * (max - min + 1)) + min', viewValue: '(GMT -4:00) PRT'},
-    {value: 'floor(Math. random() * (max - min + 1)) + min', viewValue: '(GMT -3:30) CNT'},
-    {value: 'floor(Math. random() * (max - min + 1)) + min', viewValue: '(GMT -3:00) AGT'},
-    {value: 'floor(Math. random() * (max - min + 1)) + min', viewValue: '(GMT -3:00) BET'},
-    {value: 'floor(Math. random() * (max - min + 1)) + min', viewValue: '(GMT -1:00) CAT'},
+  times: string[] = [
+    '(GMT +00:00) GMT',
+    '(GMT +00:00) UTC',
+    '(GMT +1:00) ECT',
+    '(GMT +2:00) EET',
+    '(GMT +2:00) ART',
+    '(GMT +3:00) EAT',
+    '(GMT +3:30) MET',
+    '(GMT +4:00) NET',
+    '(GMT +5:00) PLT',
+    '(GMT +5:30) IST',
+    '(GMT +6:00) BST',
+    '(GMT +7:00) VST',
+    '(GMT +8:00) CTT',
+    '(GMT +9:00) JST',
+    '(GMT +9:30) ACT',
+    '(GMT +10:00) AET',
+    '(GMT +11:00) SST',
+    '(GMT +12:00) NST',
+    '(GMT -11:00) MIT',
+    '(GMT -10:00) HST',
+    '(GMT -9:00) AST',
+    '(GMT -8:00) PST',
+    '(GMT -7:00) PNT',
+    '(GMT -7:00) MST',
+    '(GMT -6:00) CST',
+    '(GMT -5:00) EST',
+    '(GMT -5:00) IET',
+    '(GMT -4:00) PRT',
+    '(GMT -3:30) CNT',
+    '(GMT -3:00) AGT',
+    '(GMT -3:00) BET',
+    '(GMT -1:00) CAT'
   ];
-  foodControl = new FormControl(this.foods[2].value);
 
 
   contact = {
     contacts: [{ phoneNo: '', emailAddr: '' }]
-  } 
-  
+  }
+
   form: FormGroup = this.formBuilder.group({
     contacts: this.buildContacts(this.contact.contacts)
   });
@@ -77,11 +86,8 @@ this.isShown = ! this.isShown;
   public formGroupAdd!: FormGroup;
   subscriptions = new Subscription();
 
-  constructor(private packetService: PacketService, private formBuilder: FormBuilder) { 
+  constructor(private packetService: PacketService, private formBuilder: FormBuilder) {
 
-      this.form = new FormGroup({
-        food: this.foodControl,
-      });
 
   }
   get contacts(): FormArray {
@@ -91,9 +97,9 @@ this.isShown = ! this.isShown;
   buildContacts(contacts: {phoneNo: string; emailAddr: string;}[] = []) {
     return this.formBuilder.array(contacts.map(contact => this.formBuilder.group(contact)));
   }
-
   addContactField() {
-    this.contacts.push(this.formBuilder.group({phoneNo: null, emailAddr: null}))
+    this.contacts.push(this.formBuilder.group({name: new FormControl(''),}))
+
   }
 
   removeContactField(index: number): void {
@@ -111,7 +117,15 @@ this.isShown = ! this.isShown;
     this.addContactField();
   }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.form = new FormGroup({
+      contacts: new FormArray([
+        new FormGroup({
+          name: new FormControl(''),
+
+        })
+      ])
+    });
   }
 
   public addHandler() {
@@ -126,8 +140,9 @@ this.isShown = ! this.isShown;
     });
   }
   public saveHandler() {
-    console.log('user is added')
-  
+    console.log('location is added')
+
   }
- 
+
+
 }

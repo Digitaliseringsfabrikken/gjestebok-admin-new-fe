@@ -1,82 +1,3 @@
-
-/*    FORM CSS    */
-form {
-  width: 100%;
-  display: block;
-  height: auto;
-  margin: 0 0 0 0;
-  padding: 0 0 0 0;
-}
-label{
-  font-family: 'Roboto', sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 16px;
-  color: #003060;
-}
-.mat-label{
-  font-family: 'Roboto', sans-serif !important;
-  font-style: normal !important;
-  font-weight: 400 !important;
-  font-size: 14px !important;
-  line-height: 16px !important;
-  color: #003060 !important;
-}
-form input {
-  display: block;
-  width: 100%;
-  padding: 16px;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 20px;
-  /*margin: 0 0 16px 0;*/
-  border: 1px solid #DDE4EE;
-  background: 0 none;
-  outline: none;
-  color: #1252A1;
-  /* background-color: #FAFCFE; */
-  font-family: 'Roboto', sans-serif !important;
-}
-form textarea {
-  display: block;
-  width: 100%;
-  margin: 0 0 16px 0;
-  padding: 16px;
-  resize: none;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 20px;
-  background: 0 none;
-  border: 1px solid #DDE4EE;
-  color: #1252A1;
-  outline: none;
-  box-sizing: border-box;
-  background-color: #FAFCFE;
-  font-family: 'Roboto', sans-serif !important;
-}
-form input[type="submit"] {
-  width: auto;
-  /*margin: 16px;*/
-  padding: 16px;
-  border-radius: 4px;
-  border: none;
-  background-color: #1560BD;
-  font-family: 'Roboto', sans-serif !important;
-
-}
-form input::placeholder, form textarea::placeholder {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 20px;
-  color: #97ACCB;
-  padding: 14px 1px;
-  font-family: 'Roboto', sans-serif !important;
-}
-.c_pointer{
-  cursor: pointer;
-}
-
 .mat-horizontal-stepper-header-container{
   background: #F5F7FA !important;
   margin-bottom: 20px;
@@ -88,9 +9,7 @@ form input::placeholder, form textarea::placeholder {
   display: inline-block;
   float: right;
 }
-.mat-form-field-wrapper{
-  margin-bottom: 15px;
-}
+
 .form_bck{
   background-color:white !important;
   margin-top: 30px;
@@ -155,4 +74,318 @@ h3{
 }
 h1 {
   color:red;
+}
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+
+}
+.example-full-width {
+  width: 100%;
+}
+
+td {
+  padding-right: 8px;
+}
+table tr td{
+  padding: 0 !important;
+}
+.w100{
+  width: 100%;
+}
+.w_70{
+  width: 70%;
+}
+.w_30{
+  width: 30%;
+  margin-left: 16px;
+}
+.d_flex{
+  display: flex;
+}
+.border_form{
+  border-top: 1px solid #DDE4EE;
+  padding-top: 30px;
+
+}
+.right_buttons{
+  float: right;
+}
+form input {
+  display: block;
+  width: 100%;
+  padding: 16px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  margin: 0 0 16px 0;
+  border: 1px solid #DDE4EE;
+  background: 0 none;
+  outline: none;
+  color: #1252A1;
+  /* background-color: #FAFCFE; */
+  font-family: 'Roboto', sans-serif !important;
+}
+.mat-form-field:focus{
+  background-color: white !important;}
+
+.example-section {
+  margin: 12px 0;
+}
+
+#expand_section{
+  display: block;
+}
+form mat-select{
+  background: #FAFCFE;
+  border: 1px solid #DDE4EE;
+  border-radius: 4px;
+  padding:16px;
+}
+span.mat-select-value-text{
+  color:#1252A1 !important;
+}
+
+
+.c_pointer{
+  cursor: pointer;
+}
+
+.mat-horizontal-stepper-header-container{
+  background: #F5F7FA !important;
+  margin-bottom: 20px;
+}
+.mat-form-field{
+  display: block !important;
+}
+.entrance.white_button{
+  display: inline-block;
+  float: right;
+}
+.mat-form-field-wrapper{
+  margin-bottom: 15px !important;
+  background-color:white !important;
+  padding-bottom: 0 !important;
+}
+.mat-form-field-flex{
+  background-color: white;
+}
+
+.form_bck{
+  background-color:white !important;
+  margin-top: 30px;
+  padding:20px;
+  /*border: 1px solid #DDE4EE;*/
+  border-radius: 8px;
+}
+.right_btn{
+  margin-top: 20px;
+  float: right;
+  display:inline-block;
+  padding:0 !important;
+}
+.blue_button{
+  margin-left: 15px;
+}
+
+.left_btn{
+  margin-top: 20px;
+}
+h3{
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 32px;
+  color: #003060;
+  margin-bottom: 20px;
+}
+
+.blue_button{
+  float:right;
+}
+
+.search{
+  padding: 16px 14px 14px 45px !important;
+  border: 1px solid #DDE4EE;
+  border-radius: 4px;
+  width: 356px !important;
+  background-color: #ffffff;
+  box-sizing: border-box !important;
+  color: #1252A1;
+  font-size: 16px !important;
+  line-height: 20px !important;
+}
+.search_icon{
+  position: absolute;
+  top: 13px;
+  left: 16px;
+  color: #97ACCB
+}
+
+.flex_contaienr{
+  display: flex;
+  flex-wrap: wrap;
+}
+.flex_contaienr .example-margin{
+  width: 100px;
+  margin-right: 105px;
+  margin-bottom: 20px;
+}
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+
+}
+.example-full-width {
+  width: 100%;
+}
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+
+}
+.example-full-width {
+  width: 100%;
+}
+
+td {
+  padding-right: 8px;
+}
+table tr td{
+  padding: 0 !important;
+}
+.w100{
+  width: 100%;
+}
+.w_70{
+  width: 70%;
+}
+.w_30{
+  width: 30%;
+  margin-left: 16px;
+}
+.d_flex{
+  display: flex;
+}
+.border_form{
+  border-top: 1px solid #DDE4EE;
+  padding-top: 30px;
+
+}
+.right_buttons{
+  float: right;
+}
+form input {
+  display: block;
+  width: 100%;
+  padding: 16px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  border: 1px solid #DDE4EE;
+  background: 0 none;
+  outline: none;
+  color: #1252A1;
+  /* background-color: #FAFCFE; */
+  font-family: 'Roboto', sans-serif !important;
+}
+.mat-form-field:focus{
+  background-color: white !important;}
+
+.example-section {
+  margin: 12px 0;
+}
+
+#expand_section{
+  display: block;
+}
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+
+}
+.example-full-width {
+  width: 100%;
+}
+
+td {
+  padding-right: 8px;
+}
+table tr td{
+  padding: 0 !important;
+}
+.w100{
+  width: 100%;
+}
+.w_70{
+  width: 70%;
+}
+.w_30{
+  width: 30%;
+  margin-left: 16px;
+}
+.d_flex{
+  display: flex;
+}
+.border_form{
+  /*border-top: 1px solid #DDE4EE;*/
+  padding-top: 30px;
+
+}
+.right_buttons{
+  float: right;
+}
+
+.mat-form-field:focus{
+  background-color: white !important;}
+
+.example-section {
+  margin: 12px 0;
+}
+
+#expand_section{
+  display: block;
+}
+input {
+  background-color: white !important;
+}
+.mat-form-field-flex{
+  background-color: white !important;
+}
+.paragraph_popup{
+  margin: 20px 0;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: #003060;
+}
+.border_form {
+  border: 1px solid #DDE4EE;
+}
+form mat-select{
+  background: #FAFCFE;
+  border: 1px solid #DDE4EE;
+  border-radius: 4px;
+  padding:16px;
+}
+span.mat-select-value-text{
+  color:#1252A1 !important;
+}
+
+.add_entrance.mat-form-field-flex{
+  display: inline-block !important;
+  flex-direction: column !important;
+}
+
+::ng-deep .mat-form-field-underline {
+  display: none !important;
+}
+p.ng-star-inserted{
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 20px;
+  color: #003060;
 }

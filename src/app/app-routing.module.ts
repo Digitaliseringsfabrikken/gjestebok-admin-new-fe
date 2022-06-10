@@ -7,6 +7,8 @@ import { AdminClientsComponent } from './admin-clients/admin-clients.component';
 import { WorkplacesComponent } from './workplaces/workplaces/workplaces.component';
 import { LocationsComponent } from './workplaces/locations/locations.component';
 import { WizardComponent } from './workplaces/wizard/wizard.component';
+import { DevicesComponent } from './devices/devices.component';
+import { UsersComponent } from './users/users.component';
 
 const routes: Routes = [
   { path: '', 
@@ -39,6 +41,14 @@ const routes: Routes = [
   {
   path: 'workplace-wizard',
   component: WizardComponent
+  },
+  {
+    path: 'devices',
+    component: DevicesComponent
+  },
+  {
+    path: 'users',
+    component: UsersComponent
   }
 ];
 

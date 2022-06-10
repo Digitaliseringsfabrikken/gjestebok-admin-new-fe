@@ -203,6 +203,7 @@ label{
   font-size: 14px;
   line-height: 16px;
   color: #003060;
+  display: block;
 }
 .mat-label{
   font-family: 'Roboto', sans-serif !important;

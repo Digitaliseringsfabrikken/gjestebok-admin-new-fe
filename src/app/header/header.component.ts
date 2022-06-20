@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -9,7 +10,7 @@ export class HeaderComponent implements OnInit {
   clients:any = []
   selectVal:string = "";
   user:any
-  constructor() { 
+  constructor(public router: Router) { 
     this.clients = ['norautron', 'test2', 'test3']
     this.user=false
   }

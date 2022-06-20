@@ -1,7 +1,7 @@
 import {Component, OnInit, Output, EventEmitter, HostListener} from '@angular/core';
 import { animate, keyframes, style, transition, trigger } from '@angular/animations';
 import { navbarData } from './nav-data';
-import { RouterModule } from '@angular/router'
+import { RouterModule , Router } from '@angular/router'
 
 interface SideNavToggle{
   screenWidth: number;
@@ -40,6 +40,8 @@ interface SideNavToggle{
   ]
 })
 export class SidebarComponent implements OnInit {
+
+  constructor(public router: Router){}
 
   @Output() onToggleSideNav: EventEmitter<SideNavToggle> = new EventEmitter();
   collapsed = false;

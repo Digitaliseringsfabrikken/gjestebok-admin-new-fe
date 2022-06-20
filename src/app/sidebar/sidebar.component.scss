@@ -79,8 +79,8 @@
 
       .sidenav-link-icon {
         font-size: 22px;
-        width: 2rem;
-        min-width: 2rem;
+        width: 30px;
+        min-width: 30px;
         margin: 0 0.5rem;
         text-align: center;
       }
@@ -107,6 +107,13 @@
     color: #1560BD;
   }
 }
+.active_sub{
+  background-color: white;
+
+    ul.submenu li {
+      border-left-color: #1560BD;
+    }
+}
 li.sidenav-nav-item{
   list-style: none !important;
 }
@@ -123,3 +130,30 @@ li.sidenav-nav-item{
   margin: 0 0.5rem;
 }
 
+ul.submenu li {
+  list-style: none;
+  padding: 0 0 10px 10px;
+  border-left: 1px solid #c6d1e2;
+}
+ul.submenu li a{
+  color: #c6d1e2;
+}
+ul.submenu{
+  padding: 10px 0 0px 10px !important;
+}
+
+.collapse_icon{
+  margin-left: 30px;
+}
+.user_name{
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  color: #1560BD;
+}
+.user_role{
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #97ACCB;
+}

@@ -1,5 +1,5 @@
 .client_dashboard{
-    background: #e5e5e5;
+    /*background: #e5e5e5;*/
     padding: 50px 0;
 }
 .client_dashboard h2{
@@ -40,9 +40,10 @@
 }
 .show_devices {
     display: flex;
-    float: right;
-    background: #E8ECF2;
-    border: none;
+    float: left;
+    background: #F8FAFC;
+    border: 1px solid #DDE4EE;
+  margin-right: 10px;
 }
 .title_subtitle p{
     color: #97ACCB;
@@ -64,19 +65,20 @@
 /* Bubble */
 .bubble{
     display: flex;
+  flex-wrap: wrap-reverse;
     text-align: center;
     justify-content: center;
     align-items: center;
 }
 .bubble_1{
-    transform: translate(107px, 34px);
-    background-color: #1560BD;
+  transform: translateX(12px);
+    background-color: #5D8EF0;
     width: 230px;
     height: 230px;
     position: relative;
     border-radius: 50%;
     transition: 0.5s ease-in-out;
-   
+
 }
 .inside_info{
     position: absolute;
@@ -93,8 +95,8 @@
 }
 
 .bubble_2{
-    transform: translate(-5px, 183px);
-    background-color: #5D8EF0;
+    /*transform: translate(-5px, 183px);*/
+    background-color: #00388C;
     width: 230px;
     height: 230px;
     position: relative;
@@ -103,8 +105,8 @@
 }
 
 .bubble_3{
-    transform: translate(-127px, 42px);
-    background-color: #00388C;
+  transform: translate(10px ,53px);
+    background-color: #1560BD;
     width: 230px;
     height: 230px;
     position: relative;
@@ -122,4 +124,20 @@
 }
 .bubble_1:hover + .bubble_2{
     opacity: 50% !important;
+}
+span.number_bubble {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 74px;
+  line-height: 88px;
+  color: #fff;
+}
+span.name_bubble{
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 40px;
+  color: #fff;
 }

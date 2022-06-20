@@ -1,20 +1,15 @@
-<h4>Add location</h4>
+<h4 class="modal_title">Add location</h4>
 <form [formGroup]="form" (submit)="submit(form.value)">
-<div class="container">
+<div class="container gjestebok_modal">
     <div class="row">
         <div class="col-md-12">
-
-
-                <label>Location name</label>
-                            <mat-form-field class="example-full-width" appearance="fill">
-                              <input matInput formControlName="name" placeholder="Digitaliseringsfabrikken">
-                            </mat-form-field>
-
+                <h6>Location name</h6>
+                <mat-form-field class="example-full-width" appearance="fill">
+                  <input matInput formControlName="name" placeholder="Digitaliseringsfabrikken">
+                </mat-form-field>
         </div>
         <div class="col-md-7">
-
-
-                <p>Location details</p>
+                <h6>Location details</h6>
                 <div class="form_border">
                     <label>Street</label>
                     <mat-form-field class="example-full-width" appearance="fill">
@@ -56,16 +51,16 @@
         </div>
 
         <div class="col-md-5">
-            <p>Location entrances</p>
-
+            <h6>Location entrances</h6>
+            <div class="form_border entrances_section">
           <mat-form-field *ngFor="let contact of contacts?.controls; let i = index" class="example-full-width add_entrance" appearance="fill">
             <label>Entrance {{i + 1}}</label>
             <input matInput formControlName="name" placeholder="Glückstads gate 149" style="width:92%;">
-            <button class="btn-remove" type="button" (click)="removeContactField(i)">x</button>
+            <!-- <button class="btn-remove" type="button" (click)="removeContactField(i)">x</button> -->
 
           </mat-form-field>
           <button class="btn-add white_button " (click)="addContactField()">Add another entrance</button>
-
+            </div>
         </div>
     </div>
 </div>
@@ -77,7 +72,7 @@
       </div>
 
       <div class="hidden_sectionn" *ngIf="isShown">
-        <h5>Companies in this location</h5>
+        <h6>Companies in this location</h6>
         <div class="flex_contaienr hidden_section">
           <mat-checkbox color="primary" class="example-margin">Headquarters Oslo</mat-checkbox>
           <mat-checkbox color="primary"  class="example-margin">Main office Copenhagen</mat-checkbox>

@@ -25,4 +25,7 @@ const httpOptions = {
       getUser(data: any){
         return this.http.get(this.apiPartialEndpoint + `/api/user`, data).pipe();
       }
+      getAllUsers(){
+        return this.http.get(this.apiPartialEndpoint + `/api/users`).pipe();
+      }
     }

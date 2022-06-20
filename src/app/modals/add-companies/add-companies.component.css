@@ -223,3 +223,6 @@ input {
 ::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-background {
   background-color: #1560BD !important;
 }
+input{
+  background-color: #FAFCFE !important;
+}

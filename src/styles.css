@@ -328,7 +328,16 @@ td.mat-cell {
   /* pagination */
   .mat-paginator-outer-container {
     display: flex;
-    background: #E5E5E5 !important;
+    background: #F5F7FA !important;
+}
+.mat-paginator-range-label {
+    margin: 0 32px 0 24px;
+    color: #003060;
+}
+.mat-paginator-icon {
+    width: 28px;
+    fill: currentColor;
+    color: #003060;
 }
 .mat-paginator-page-size {
     display: flex;
@@ -402,6 +411,7 @@ td.mat-cell {
   .mat-form-field-appearance-fill .mat-form-field-flex {
     border-radius: 4px;
     padding: 0px !important;
+    background-color: transparent !important;
 }
 .gjestebok_modal input{
     padding: 14px 16px !important;
@@ -517,5 +527,17 @@ td.mat-cell {
       overflow-y: scroll;
   }
   .mat-form-field-flex{
-      background-color: white !important;
+      margin-right: 10px;
   }
+  .entrances_section .mat-form-field-flex{
+   display: block;
+}
+.mat-form-field-appearance-fill .mat-select-arrow-wrapper {
+    transform: translateY(0%) !important;
+}
+.mat-select-value {
+    color: #1252A1 !important;
+}
+.mat-option {
+    color: #97ACCB !important;
+}

@@ -80,11 +80,9 @@ export class UsersComponent implements OnInit {
    
   
     onAllClients() {
-      
-      this.packetService.getAllClients()
-        .subscribe(
+      // console.log('get All Clientsgg');
+      this.packetService.getAllUsers().subscribe(
           res => {
-            this.rowData.data = res as Client[];
             this.clients = res;
             console.log('get All Clientsgg',  this.clients);
           },

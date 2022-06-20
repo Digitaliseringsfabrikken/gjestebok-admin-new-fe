@@ -275,3 +275,6 @@ color: #003060;
   display: inline-flex;
 
 }
+input{
+  background-color: #FAFCFE !important;
+}

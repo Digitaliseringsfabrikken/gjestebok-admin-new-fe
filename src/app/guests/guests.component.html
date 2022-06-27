@@ -1,0 +1,241 @@
+<div class="guests">
+    <div class="container">
+       <div class="row">
+          <div class="col-md-12">
+             <h2 class="title">Guests</h2>
+          </div>
+          <div class="col-md-8">
+             <!-- CHART -->
+             <div class="row">
+                <div class="col-md-6">
+                   <div class="workplace_box">
+                      <h5 class="header">Invites</h5>
+                      <img src="../../../assets/Digitaliseringsfabrikken.png" alt="no image">
+                      <div class="butons">
+                         <div class="blue_button">
+                            View invites
+                         </div>
+                         <div class="white_button">
+                            New invite
+                         </div>
+                      </div>
+                   </div>
+                </div>
+                <div class="col-md-6">
+                   <div class="workplace_box">
+                      <h5 class="header">Visitors</h5>
+                      <img src="../../../assets/Digitaliseringsfabrikken.png" alt="no image">
+                      <div class="butons">
+                         <div class="blue_button">
+                            View visitors
+                         </div>
+                         <div class="white_button">
+                            New visitor
+                         </div>
+                      </div>
+                   </div>
+                </div>
+                <div class="col-md-12">
+                   <div class="row chart_row">
+                      <div class="col-md-12">
+                         <mat-tab-group class="remove-border-bottom">
+                            <mat-tab label="Today">
+                               <h1>Chart here</h1>
+                            </mat-tab>
+                            <mat-tab label="This week">
+                               <h1>Chart here</h1>
+                            </mat-tab>
+                         </mat-tab-group>
+                         <div class=" d-flex justify-content-end hard_coded" >
+                            <div class="guests_numbers">
+                               <div class="box_numbers">
+                                  <span class="name_invites">Invites</span>
+                                  <span class="number_invites">32</span>
+                               </div>
+                               <div class="box_numbers">
+                                  <span class="name_invites">Visitors</span>
+                                  <span class="number_invites">14</span>
+                               </div>
+                            </div>
+                         </div>
+                      </div>
+                   </div>
+                </div>
+                <!--  End of col-md-12  -->
+             </div>
+          </div>
+          <div class="col-md-4 upcoming_box">
+             <h5 class="header">Upcoming guests</h5>
+             <div class="upcoming">
+                <div class="point">
+                   <!-- <i class="fa fa-circle" aria-hidden="true"></i> -->
+                   <img src="../../assets/current_step.svg" alt="stepper icon">
+                </div>
+                <div class="time_date">
+                   <span>Today, 10:15 AM</span>
+                   <div class="name_guest">
+                      <h6>Olivia Brown</h6>
+                   </div>
+                </div>
+             </div>
+             <div class="upcoming">
+                <div class="point">
+                   <!-- <i class="fa fa-circle" aria-hidden="true"></i> -->
+                   <img src="../../assets/empty_circle.svg" alt="stepper icon">
+                </div>
+                <div class="time_date">
+                   <span>Today, 10:15 AM</span>
+                   <div class="name_guest">
+                      <h6>Olivia Brown</h6>
+                   </div>
+                </div>
+             </div>
+             <div class="upcoming">
+                <div class="point">
+                   <!-- <i class="fa fa-circle" aria-hidden="true"></i> -->
+                   <img src="../../assets/empty_circle.svg" alt="stepper icon">
+                </div>
+                <div class="time_date">
+                   <span>Today, 10:15 AM</span>
+                   <div class="name_guest">
+                      <h6>Olivia Brown</h6>
+                   </div>
+                </div>
+             </div>
+             <div class="upcoming">
+                <div class="point">
+                   <!-- <i class="fa fa-circle" aria-hidden="true"></i> -->
+                   <img src="../../assets/empty_circle.svg" alt="stepper icon">
+                </div>
+                <div class="time_date">
+                   <span>Today, 10:15 AM</span>
+                   <div class="name_guest">
+                      <h6>Olivia Brown</h6>
+                   </div>
+                </div>
+             </div>
+          </div>
+       </div>
+       <!-- End row -->
+       <div class="row">
+          <div class="col-md-4 offset-md-8 hosts">
+             <div class="hosts_box">
+                <h5 class="header">Hosts with most guests</h5>
+                <!-- TABS START -->
+                <div class="tab-slider--nav">
+                   <ul class="tab-slider--tabs">
+                      <li class="tab-slider--trigger" [class.active]="viewMode == 'tab1'" rel="tab1" (click)="viewMode ='tab1'">Today</li>
+                      <li class="tab-slider--trigger" [class.active]="viewMode == 'tab2'" rel="tab2" (click)="viewMode ='tab2'">This week</li>
+                      <li class="tab-slider--trigger" [class.active]="viewMode == 'tab3'" rel="tab3" (click)="viewMode ='tab3'">Next week</li>
+                   </ul>
+                </div>
+                <div class="tab-slider--container" [ngSwitch]="viewMode">
+                   <div id="tab1" class="tab-slider--body" *ngSwitchCase="'tab1'">
+                      <div class="box_persons">
+                         <img src="../../assets/image 18.png" alt="image">
+                         <div class="name">
+                            <h6>Alexander Kristiansen</h6>
+                            <p>Homesourcing</p>
+                         </div>
+                         <div class="box_guests">
+                            <span>5</span>
+                         </div>
+                      </div>
+                      <!--  -->
+                      <div class="box_persons">
+                         <img src="../../assets/image 18.png" alt="image">
+                         <div class="name">
+                            <h6>Alexander Kristiansen</h6>
+                            <p>Homesourcing</p>
+                         </div>
+                         <div class="box_guests">
+                            <span>4</span>
+                         </div>
+                      </div>
+                      <!--  -->
+                      <div class="box_persons">
+                         <img src="../../assets/image 18.png" alt="image">
+                         <div class="name">
+                            <h6>Alexander Kristiansen</h6>
+                            <p>Homesourcing</p>
+                         </div>
+                         <div class="box_guests">
+                            <span>5</span>
+                         </div>
+                      </div>
+                      <!--  -->
+                   </div>
+                   <div id="tab2" class="tab-slider--body" *ngSwitchCase="'tab2'">
+                      <div class="box_persons">
+                         <img src="../../assets/image 18.png" alt="image">
+                         <div class="name">
+                            <h6>Alexander Kristiansen</h6>
+                            <p>Homesourcing</p>
+                         </div>
+                         <div class="box_guests">
+                            <span>5</span>
+                         </div>
+                      </div>
+                      <div class="box_persons">
+                         <img src="../../assets/image 18.png" alt="image">
+                         <div class="name">
+                            <h6>Alexander Kristiansen</h6>
+                            <p>Homesourcing</p>
+                         </div>
+                         <div class="box_guests">
+                            <span>8</span>
+                         </div>
+                      </div>
+                      <div class="box_persons">
+                         <img src="../../assets/image 18.png" alt="image">
+                         <div class="name">
+                            <h6>Alexander Kristiansen</h6>
+                            <p>Homesourcing</p>
+                         </div>
+                         <div class="box_guests">
+                            <span>2</span>
+                         </div>
+                      </div>
+                   </div>
+                   <div id="tab3" class="tab-slider--body" *ngSwitchCase="'tab3'">
+                      <div class="box_persons">
+                         <img src="../../assets/image 18.png" alt="image">
+                         <div class="name">
+                            <h6>Alexander Kristiansen</h6>
+                            <p>Homesourcing</p>
+                         </div>
+                         <div class="box_guests">
+                            <span>5</span>
+                         </div>
+                      </div>
+                      <!--  -->
+                      <div class="box_persons">
+                         <img src="../../assets/image 18.png" alt="image">
+                         <div class="name">
+                            <h6>Alexander Kristiansen</h6>
+                            <p>Homesourcing</p>
+                         </div>
+                         <div class="box_guests">
+                            <span>4</span>
+                         </div>
+                      </div>
+                      <!--  -->
+                      <div class="box_persons">
+                         <img src="../../assets/image 18.png" alt="image">
+                         <div class="name">
+                            <h6>Alexander Kristiansen</h6>
+                            <p>Homesourcing</p>
+                         </div>
+                         <div class="box_guests">
+                            <span>5</span>
+                         </div>
+                      </div>
+                      <!--  -->
+                   </div>
+                </div>
+                <!-- TABS END -->
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>

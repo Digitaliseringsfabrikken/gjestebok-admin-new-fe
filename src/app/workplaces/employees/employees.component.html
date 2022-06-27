@@ -1,94 +1,68 @@
 <div class="background_page admin_client">
-    <div class="container">
-      <div class="row">
+  <div class="container">
+     <div class="row">
         <div class="col-sm-12">
-          <div class="table_buttons">
-       
-          <div class="client_buttons">
-            
-          <button class="white_button m_right" (click)="onBtnExport()">
-            Import employees
-          </button>
-            <button mat-raised-button  class="blue_button" (click)="openDialog()">Create employee</button> <!--(click)="open(mymodal)"-->
-          </div>
-          <div fxLayout fxLayoutAlign="center center">
-            <mat-form-field fxFlex="30%">
-              
-              <input matInput type="text" (keyup)="doFilter($event)" placeholder="Search input" class="search">
-              <span class='material-icons search_icon'>search</span>
-            </mat-form-field>
-  
-            <mat-form-field fxFlex="30%">
-              
-              <input matInput type="text" (keyup)="doFilter($event)" placeholder="Filter by location" class="search">
-              <span class='material-icons search_icon'>map</span>
-            </mat-form-field>
-  
-          </div>
+           <div class="table_buttons">
+              <div class="client_buttons">
+                 <button class="white_button m_right" (click)="onBtnExport()">
+                 Import employees
+                 </button>
+                 <button mat-raised-button  class="blue_button" (click)="openDialog()">Create employee</button> <!--(click)="open(mymodal)"-->
+              </div>
+              <div fxLayout fxLayoutAlign="center center">
+                 <mat-form-field fxFlex="30%">
+                    <input matInput type="text" (keyup)="doFilter($event)" placeholder="Search input" class="search">
+                    <span class='material-icons search_icon'>search</span>
+                 </mat-form-field>
+                 <mat-form-field fxFlex="30%">
+                    <input matInput type="text" (keyup)="doFilter($event)" placeholder="Filter by location" class="search">
+                    <span class='material-icons search_icon'>map</span>
+                 </mat-form-field>
+              </div>
+           </div>
+           <table mat-table [dataSource]="rowData" matSort (matSortChange)="announceSortChange($event)"  class="mat-elevation-z8">
+           <!-- Position Column -->
+           <!-- <ng-container matColumnDef="image">
+              <th mat-header-cell *matHeaderCellDef> </th>
+              <td mat-cell *matCellDef="let element"> <img width="40px" src="{{element.image}}" alt=""> </td>
+              </ng-container> -->
+           <!-- Name Column -->
+           <ng-container matColumnDef="name">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Name"> Name </th>
+              <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+           </ng-container>
+           <!-- Weight Column -->
+           <ng-container matColumnDef="contact">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Contact"> Contact </th>
+              <td mat-cell *matCellDef="let element"> {{element.contact}} </td>
+           </ng-container>
+           <!-- Symbol Column -->
+           <ng-container matColumnDef="company">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Company"> Company </th>
+              <td mat-cell *matCellDef="let element"> {{element.company}} </td>
+           </ng-container>
+           <ng-container matColumnDef="departament">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Department"> Department</th>
+              <td mat-cell *matCellDef="let element"> {{element.departament}} </td>
+           </ng-container>
+           <ng-container matColumnDef="location">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Location"> Location</th>
+              <td mat-cell *matCellDef="let element"> {{element.location}} </td>
+           </ng-container>
+           <ng-container matColumnDef="edit">
+              <th mat-header-cell *matHeaderCellDef> </th>
+              <td mat-cell *matCellDef="let element">  <img (click)="openEditDialog(element)" src="../assets/edit.png" alt="" class="c_pointer edit"> </td>
+           </ng-container>
+           <ng-container matColumnDef="delete">
+              <th mat-header-cell *matHeaderCellDef> </th>
+              <td mat-cell *matCellDef="let element">  <img  src="../assets/delete.png" alt="" class="c_pointer delete"> </td>
+           </ng-container>
+           <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+           <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+           </table>
+           <mat-paginator [pageSize]="2" >
+           </mat-paginator>
         </div>
-  
-    
-        
-      <table mat-table [dataSource]="rowData" matSort (matSortChange)="announceSortChange($event)"  class="mat-elevation-z8">
-  
-      
-        <!-- Position Column -->
-        <!-- <ng-container matColumnDef="image">
-          <th mat-header-cell *matHeaderCellDef> </th>
-          <td mat-cell *matCellDef="let element"> <img width="40px" src="{{element.image}}" alt=""> </td>
-        </ng-container> -->
-      
-        <!-- Name Column -->
-        <ng-container matColumnDef="name">
-          <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Name"> Name </th>
-          <td mat-cell *matCellDef="let element"> {{element.name}} </td>
-        </ng-container>
-      
-        <!-- Weight Column -->
-        <ng-container matColumnDef="contact">
-          <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Contact"> Contact </th>
-          <td mat-cell *matCellDef="let element"> {{element.contact}} </td>
-        </ng-container>
-      
-        <!-- Symbol Column -->
-        <ng-container matColumnDef="company">
-          <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Company"> Company </th>
-          <td mat-cell *matCellDef="let element"> {{element.company}} </td>
-        </ng-container>
-  
-        <ng-container matColumnDef="departament">
-          <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Department"> Department</th>
-          <td mat-cell *matCellDef="let element"> {{element.departament}} </td>
-        </ng-container>
-
-        <ng-container matColumnDef="location">
-            <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Location"> Location</th>
-            <td mat-cell *matCellDef="let element"> {{element.location}} </td>
-          </ng-container>
-      
-  
-  
-        <ng-container matColumnDef="edit">
-          <th mat-header-cell *matHeaderCellDef> </th>
-          <td mat-cell *matCellDef="let element">  <img (click)="openEditDialog(element)" src="../assets/edit.png" alt="" class="c_pointer edit"> </td>
-        </ng-container>
-  
-        <ng-container matColumnDef="delete">
-          <th mat-header-cell *matHeaderCellDef> </th>
-          <td mat-cell *matCellDef="let element">  <img  src="../assets/delete.png" alt="" class="c_pointer delete"> </td>
-        </ng-container>
-      
-        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-  
-      
-      </table>
-      <mat-paginator [pageSize]="2" >
-      </mat-paginator>
-      
-      
-        </div>
-      </div>
-  
-    </div>
+     </div>
   </div>
+</div>

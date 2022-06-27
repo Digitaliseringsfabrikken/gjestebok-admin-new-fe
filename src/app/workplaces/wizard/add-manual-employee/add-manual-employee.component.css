@@ -337,3 +337,9 @@ h3{
 .hidden-s{
   visibility:hidden;
 }
+::ng-deep .mat-checkbox-ripple .mat-ripple-element {
+  background-color: #1560BD !important;
+}
+::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-background {
+  background-color: #1560BD !important;
+}

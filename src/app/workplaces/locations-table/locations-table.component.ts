@@ -15,40 +15,37 @@ import { MatTableDataSource } from '@angular/material/table';
 import { Client } from 'src/app/models/clients.model';
 import { MatPaginator } from '@angular/material/paginator';
 import {MatDialog, MatDialogModule ,  MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
-import { DeleteClientComponent } from 'src/app/modals/delete-client/delete-client.component';
-import { AddDevicesComponent } from "../modals/add-devices/add-devices.component";
-
+import { AddLocationComponent } from 'src/app/modals/add-location/add-location.component';
+import { Router } from '@angular/router';
+import { MatTabChangeEvent } from '@angular/material/tabs/tab-group';
+import { LocationsComponent } from '../locations/locations.component';
 
 @Component({
-  selector: 'app-devices',
-  templateUrl: './devices.component.html',
-  styleUrls: ['./devices.component.css']
+  selector: 'app-locations-table',
+  templateUrl: './locations-table.component.html',
+  styleUrls: ['./locations-table.component.css']
 })
-export class DevicesComponent implements OnInit {
+export class LocationsTableComponent implements OnInit, AfterViewInit {
 
-public clients :any
-public rowData = new MatTableDataSource<Client>();
-private gridApi!: GridApi;
-public displayedColumns = ['name', 'status', 'code', 'location', 'entrance', 'edit', 'delete'];
-constructor(private packetService: PacketService, private excelService:ExcelService, public dialog: MatDialog){}
+  public clients :any
+  public rowData = new MatTableDataSource<Client>();
+  private gridApi!: GridApi;
+  public displayedColumns = ['name',  'address', 'city', 'post_code','country','entrances', 'edit', 'delete'];
+  constructor(private packetService: PacketService, private excelService:ExcelService, public dialog: MatDialog, private router: Router){}
 
-// Final Popup
-openDialogCompany(){
-  this.dialog.open(AddDevicesComponent, {
+
+
+
+  // Final Popup
+openDialog(){
+  this.dialog.open(AddLocationComponent, {
     width:'60%'
   });
 }
 openEditDialog(element:any){
   console.log('heree edit', element)
-  this.dialog.open(AddDevicesComponent, {
+  this.dialog.open(LocationsComponent, {
     width:'60%'
-  });
-}
-
-openDeleteDialog(element:any){
-  // console.log('heree delete', element)
-  this.dialog.open(DeleteClientComponent, {
-    width:'50%'
   });
 }
 
@@ -56,6 +53,13 @@ view(element:any){
   console.log('heree view', element)
 
 }
+// openDeleteDialog(element:any){
+//   // console.log('heree delete', element)
+//   this.dialog.open(DeleteClientComponent, {
+//     width:'50%'
+//   });
+// }
+
 @ViewChild(MatSort)
 sort!: MatSort;
 @ViewChild(MatPaginator)
@@ -81,7 +85,7 @@ ngOnInit(): void {
 
 
 onAllClients() {
-
+  
   this.packetService.getAllClients()
     .subscribe(
       res => {
@@ -106,7 +110,10 @@ exportAsXLSX():void {
   this.excelService.exportAsExcelFile( this.clients, 'myExcelFile');
 }
 onBtnExport() {
-  this.gridApi.exportDataAsCsv();
+this.gridApi.exportDataAsCsv();
+}
 }
 
-}
+
+
+

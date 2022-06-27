@@ -25,14 +25,13 @@ export class AuthenticationService {
     }
 
     login(email: string, password: string) {
-        console.log('ne metode', email, password)
+        console.log('email and password', email, password)
         return this.http.post<any>(`${environment.apiUrl}/login`, { email, password })
-            .pipe(map(user => {
-                console.log('user', user)
-                // store user details and jwt token in local storage to keep user logged in between page refreshes
+            .pipe(map(response => {
+                console.log('response', response) //our response is null
                 localStorage.setItem('user', JSON.stringify(email));
-                this.userSubject.next(user);
-                return user;
+                this.userSubject.next(response);
+                return response;
             }));
     }
 

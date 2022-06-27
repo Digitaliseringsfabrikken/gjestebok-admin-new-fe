@@ -12,12 +12,15 @@ import {
 import {FormGroup, FormControl, FormBuilder} from '@angular/forms';
 import { MatSort, Sort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
-import { Client } from './../models/clients.model';
+import { User } from './../models/users.model';
 import { MatPaginator } from '@angular/material/paginator';
 import {MatDialog, MatDialogModule ,  MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { AddUserComponent } from '../modals/add-user/add-user.component';
 import { EditUserComponent } from '../modals/edit-user/edit-user.component';
 import { DeleteUserComponent } from '../modals/delete-user/delete-user.component';
+import { AuthenticationService } from '../_services';
+// import { User, Role } from '../_models';
+
 
 @Component({
   selector: 'app-users',
@@ -27,10 +30,12 @@ import { DeleteUserComponent } from '../modals/delete-user/delete-user.component
 export class UsersComponent implements OnInit {
 
   public clients :any
-  public rowData = new MatTableDataSource<Client>();
+  allUsers: any;
+  user: User | undefined;
+  public rowData = new MatTableDataSource<User>();
   private gridApi!: GridApi;
   public displayedColumns = ['id', 'client_id', 'name', 'email', 'role', 'is_active', 'is_intercom', 'email_verified_at', 'created_at', 'updated_at', 'deleted_at'];
-  constructor(private packetService: PacketService, private excelService:ExcelService, public dialog: MatDialog){}
+  constructor(private packetService: PacketService, private excelService:ExcelService, public dialog: MatDialog,  private authenticationService: AuthenticationService){}
 
   openDialog(){
     this.dialog.open(AddUserComponent, {
@@ -75,21 +80,24 @@ export class UsersComponent implements OnInit {
   
   
     ngOnInit(): void {
-      this.onAllClients()
+      this.getAllUsers()
     }
    
   
-    onAllClients() {
-      // console.log('get All Clientsgg');
-      this.packetService.getAllUsers().subscribe(
-          res => {
-            this.clients = res;
-            console.log('get All Clientsgg',  this.clients);
-          },
-          error => {
-            console.log(error);
-          });
+    getAllUsers() {
+      // this.authenticationService.user.subscribe(x => this.user = x);
+      // console.log('user', this.user)
+      this.packetService.getAllUsers()
+      .subscribe(
+        res => {
+          this.rowData.data = res as User[];
+           console.log('hereeee',res);
+        },
+        error => {
+          console.log(error);
+        });
     }
+
     public doFilter(event:any) {
       console.log('dd',event.target.value )
       this.rowData.filter = event.target.value.trim().toLocaleLowerCase();

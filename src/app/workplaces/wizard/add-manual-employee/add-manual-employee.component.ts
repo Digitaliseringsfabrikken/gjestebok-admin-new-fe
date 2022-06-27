@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {FormBuilder, FormControl, FormGroup, Validators, FormArray} from '@angular/forms';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+
+
 
 
 @Component({
@@ -12,12 +14,31 @@ export class AddManualEmployeeComponent implements OnInit {
 
   employeeFormGroup!: FormGroup;
 
-  constructor(private _formBuilder: FormBuilder) {}
+
+  constructor(private _formBuilder: FormBuilder, private formBuilder: FormBuilder,) {}
 
   ngOnInit() {
     this.employeeFormGroup = this._formBuilder.group({
-      firstCtrl: ['', Validators.required],
+      employeeFormGroup: ['', Validators.required],
     });
-
   };
+
+  selectedOption = '1'
+
+  // Companies Select
+  companies: string[] = [
+    'None',
+   'Homesourcing',
+   'Cisco',
+  'Vertrand AS',
+  'Carrot AS'
+  ];
+
+  // Gjestbok Role
+  roles: string[] = [
+    'None',
+    'Superadmin',
+    'Company admin'
+   ];
+
 }

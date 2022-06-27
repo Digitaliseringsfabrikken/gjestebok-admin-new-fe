@@ -1,134 +1,92 @@
 <div class="container overall" >
     <div class="row">
-        <div class="col-md-12">
-            <h2 class="title">Workplaces</h2>
-        </div>
-        <div class="col-md-4">
-            <div class="workplace_box">
-                <h5 class="header">Locations</h5>
-                <img src="../../../assets/Digitaliseringsfabrikken.png" alt="no image">
-                <div class="butons">
-                    <div [routerLink]="['/workplace-locations']" class="blue_button">
-                        View locations
-                    </div>
-                    <div class="white_button">
-                        New location
-                    </div>
+       <div class="col-md-12">
+          <h2 class="title">Workplaces</h2>
+       </div>
+       <div class="col-md-4">
+          <div class="workplace_box">
+             <h5 class="header">Locations</h5>
+             <img src="../../../assets/Digitaliseringsfabrikken.png" alt="no image">
+             <div class="butons">
+                <div [routerLink]="['/locations/locations']" class="blue_button">
+                   View locations
                 </div>
-                
-            </div>
-        </div>
-
-        <div class="col-md-4">
-            <div class="workplace_box">
-                <h5 class="header">Companies</h5>
-                <img src="../../../assets/Digitaliseringsfabrikken.png" alt="no image">
-                <div class="butons">
-                    <div [routerLink]="['/workplace-locations']" class="blue_button">
-                        View companies
-                    </div>
-                    <div class="white_button">
-                        New company
-                    </div>
+                <div class="white_button">
+                   New location
                 </div>
-                
-            </div>
-        </div>
-
-        <div class="col-md-4">
-            <div class="workplace_box">
-                <h5 class="header">Employees</h5>
-                <img src="../../../assets/Digitaliseringsfabrikken.png" alt="no image">
-                <div class="butons">
-                    <div  [routerLink]="['/workplace-locations']" class="blue_button">
-                        View emplyees
-                    </div>
-                    <div class="white_button">
-                        New employee
-                    </div>
+             </div>
+          </div>
+       </div>
+       <div class="col-md-4">
+          <div class="workplace_box">
+             <h5 class="header">Companies</h5>
+             <img src="../../../assets/Digitaliseringsfabrikken.png" alt="no image">
+             <div class="butons">
+                <div [routerLink]="['/locations/companies']" class="blue_button">
+                   View companies
                 </div>
-                
-            </div>
-        </div>
-
-
+                <div class="white_button">
+                   New company
+                </div>
+             </div>
+          </div>
+       </div>
+       <div class="col-md-4">
+          <div class="workplace_box">
+             <h5 class="header">Employees</h5>
+             <img src="../../../assets/Digitaliseringsfabrikken.png" alt="no image">
+             <div class="butons">
+                <div  [routerLink]="['/locations/employees']" class="blue_button">
+                   View emplyees
+                </div>
+                <div class="white_button">
+                   New employee
+                </div>
+             </div>
+          </div>
+       </div>
     </div>
-
     <!-- WorkPlaces Overview Map -->
-    <div class="row">   
-        <div class="col-md-8">
-            <div class="df_div">
-                <div class="workplaces_overview">
-                    <p>Workplaces overview</p>
-                    <h2>Digitaliseringsfabriken</h2>
-                </div>
-                <hr>
-                
-           
-            <div class="overview_span">
+    <div class="row">
+       <div class="col-md-8">
+          <div class="df_div">
+             <div class="workplaces_overview">
+                <p>Workplaces overview</p>
+                <h2>Digitaliseringsfabriken</h2>
+             </div>
+             <hr>
+             <div class="overview_span">
                 <div class="companies overview_span_i">
-                    <p>Companies</p>
-                <span>11</span>
+                   <p>Companies</p>
+                   <span>11</span>
                 </div>
-    
                 <div class="cointries overview_span_i">
-                    <p>Countries</p>
-                <span>4</span>
+                   <p>Countries</p>
+                   <span>4</span>
                 </div>
-            
                 <div class="cities overview_span_i">
-                    <p>Cities</p>
-                    <span>9</span>
+                   <p>Cities</p>
+                   <span>9</span>
                 </div>
-    
-                
-            </div>
-            </div>
-            <div class="map_overview">
-                <img src="../../../assets/Map 1.png" alt="no image">
-            </div>
-           
-            
-        </div>
-
-        <div class="col-md-4 recently_bg">
-
-            <h5>Workplaces setup guide</h5>
-            <p class="mt30">Not sure how to set up your Workplaces environment? </p>
-           <p> This setup guide will help you go through all the necessary steps 
-            for creating you Locations, Companies and Employees! </p>
-
-            <div class="background_img">
-                <img src="../../../assets/noto_magic-wand.svg" alt="magic wand">
-            </div>
-
-            <div class="wizard">
-                <button [routerLink]="['/workplace-wizard']" class="blue_button">Launch the Workplaces setup guide</button>
-            </div>
-
-            <!-- <h5 class="header" style="margin-bottom: 24px;">Recently changed</h5>
-            <div class="recently">
-                <span class="recently_1">Location</span>
-                <span class="recently_2">Company</span>
-                <span class="recently_3">Emplyee</span>
-            </div>
-            <div class="recently_box">
-                <p>Homesourcing</p>
-                <span>Software Services</span>
-            </div>
-
-            <div class="recently_box">
-                <p>Homesourcing</p>
-                <span>Software Services</span>
-            </div>
-
-            <div class="recently_box">
-                <p>Homesourcing</p>
-                <span>Software Services</span>
-            </div>    -->
-            
-        </div>
+             </div>
+          </div>
+          <div class="map_overview">
+             <img src="../../../assets/Map 1.png" alt="no image">
+          </div>
+       </div>
+       <div class="col-md-4 recently_bg">
+          <h5>Workplaces setup guide</h5>
+          <p class="mt30">Not sure how to set up your Workplaces environment? </p>
+          <p> This setup guide will help you go through all the necessary steps 
+             for creating you Locations, Companies and Employees! 
+          </p>
+          <div class="background_img">
+             <img src="../../../assets/noto_magic-wand.svg" alt="magic wand">
+          </div>
+          <div class="wizard">
+             <button [routerLink]="['/workplace-wizard']" class="blue_button">Launch the Workplaces setup guide</button>
+          </div>
+          
+       </div>
     </div>
-
-</div>
-
+ </div>

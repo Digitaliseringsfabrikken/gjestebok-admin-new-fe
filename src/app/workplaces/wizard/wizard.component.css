@@ -56,7 +56,10 @@ h3{
   width: 100%;
   margin-bottom: 30px;
 }
-.upload_img{
+.card_import button{
+  float: none !important;
+}
+/* .upload_img{
   background-color: rgb(255, 255, 255);
   border: solid 4px rgb(10, 112, 10);
   border-radius: 10px;
@@ -71,7 +74,7 @@ h3{
   cursor: pointer;
   width: 100px;
   height: 15px;
-}
+} */
 h1 {
   color:red;
 }
@@ -137,7 +140,7 @@ form input {
 #expand_section{
   display: block;
 }
-form mat-select{
+form .mat-select{
   background: #FAFCFE;
   border: 1px solid #DDE4EE;
   border-radius: 4px;
@@ -285,10 +288,11 @@ form input {
   font-size: 16px;
   line-height: 20px;
   border: 1px solid #DDE4EE;
+  /* background-color: #DDE4EE; */
   background: 0 none;
   outline: none;
   color: #1252A1;
-  /* background-color: #FAFCFE; */
+  background-color: #FAFCFE !important;
   font-family: 'Roboto', sans-serif !important;
 }
 .mat-form-field:focus{
@@ -376,8 +380,8 @@ span.mat-select-value-text{
 }
 
 .add_entrance.mat-form-field-flex{
-  display: inline-block !important;
-  flex-direction: column !important;
+  display: block !important;
+  /* flex-direction: column !important; */
 }
 
 ::ng-deep .mat-form-field-underline {
@@ -388,4 +392,26 @@ p.ng-star-inserted{
   font-size: 18px;
   line-height: 20px;
   color: #003060;
+}
+.btn-add{
+  float: right;
+}
+.mat-step-label{
+  transform: translateY(7px) !important;
+}
+/* TESTING HERE */
+::ng-deep .mat-step-header .mat-step-icon-selected {
+  background-color: transparent; 
+}
+.mat-step-header .mat-step-icon-state-done, .mat-step-header .mat-step-icon-state-edit {
+  background-color: transparent !important;
+  color: red;
+
+}
+.mat-step-header .mat-step-label{
+  color: red;
+}
+.mat-step-header .mat-step-icon {
+  color: red;
+  background-color: transparent;
 }

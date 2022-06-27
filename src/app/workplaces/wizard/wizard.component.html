@@ -1,192 +1,181 @@
 <div class="container py-5">
   <div class="row">
-    <div class="col-md-12">
-      <h2>Workplaces setup guide</h2>
-      <p>This setup guide will help you go through all the necessary steps to set up your Workplaces environment</p>
-
-      <mat-stepper style="background-color: #F5F7FA ; padding-bottom: 50px" #stepper>
-
-
-              <mat-step [stepControl]="firstFormGroup" errorMessage="Name is required.">
-                <form [formGroup]="firstFormGroup">
-                  <ng-template matStepLabel>LOCATION <p>{{myusername}}</p> </ng-template>
-                  <div class="row form_bck" style="background-color:white; padding:20px;">
+     <div class="col-md-12">
+        <h2>Workplaces setup guide</h2>
+        <p>This setup guide will help you go through all the necessary steps to set up your Workplaces environment</p>
+        <mat-stepper style="background-color: #F5F7FA ; padding-bottom: 50px" #stepper>
+           <mat-step [stepControl]="firstFormGroup" state="waiting">
+              <form [formGroup]="firstFormGroup">
+                 <ng-template  matStepLabel>
+                    LOCATION 
+                    <p>{{myusername}}</p>
+                 </ng-template>
+                 <div class="row form_bck" style="background-color:white; padding:20px;">
                     <div class="col-md-12 ">
-                      <h3>Create location</h3>
-                      <label>Location name</label>
-                      <mat-form-field class="example-full-width" appearance="fill">
-                        <input matInput (blur)="blurEvent($event)" placeholder="Last name, First name" formControlName="firstCtrl" required>
-                      </mat-form-field>
+                       <h3>Create location</h3>
+                       <label>Location name</label>
+                       <mat-form-field class="example-full-width" appearance="fill">
+                          <input matInput (blur)="blurEvent($event)" placeholder="Location name" formControlName="firstCtrl" required>
+                       </mat-form-field>
                     </div>
-
-                      <div class="col-md-6">
-                        <label>Street</label>
-                        <mat-form-field appearance="fill">
-                          <input matInput  formControlName="firstCtrl" >
-                        </mat-form-field>
-                        <div class="row">
+                    <div class="col-md-6">
+                       <label>Street</label>
+                       <mat-form-field appearance="fill">
+                          <input matInput  formControlName="firstCtrl" placeholder="Street" >
+                       </mat-form-field>
+                       <div class="row">
                           <div class="col-md-8">
-                            <label>City</label>
-                            <mat-form-field appearance="fill">
-                              <input matInput  formControlName="firstCtrl" >
-                            </mat-form-field>
+                             <label>City</label>
+                             <mat-form-field appearance="fill">
+                                <input matInput  formControlName="firstCtrl" placeholder="City">
+                             </mat-form-field>
                           </div>
                           <div class="col-md-4">
-                            <label>Postal code</label>
-                            <mat-form-field appearance="fill">
-                              <input matInput  formControlName="firstCtrl" >
-                            </mat-form-field>
+                             <label>Postal code</label>
+                             <mat-form-field appearance="fill">
+                                <input matInput  formControlName="firstCtrl" placeholder="Postal code">
+                             </mat-form-field>
                           </div>
-                        </div><!----  End of Row  ---->
-                        <label>Country</label>
-                        <mat-form-field appearance="fill">
-                          <input matInput formControlName="firstCtrl" >
-                        </mat-form-field>
-                        <label>Time zone</label>
-                        <mat-form-field appearance="fill">
+                       </div>
+                       <!----  End of Row  ---->
+                       <label>Country</label>
+                       <mat-form-field appearance="fill">
+                          <input matInput formControlName="firstCtrl" placeholder="Country">
+                       </mat-form-field>
+                       <label>Time zone</label>
+                       <mat-form-field appearance="fill" placeholder="Time zone ">
                           <mat-select formControlName="firstCtrl" >
-                            <mat-option>None</mat-option>
-                            <mat-option *ngFor="let time of times" [value]="time">{{time}}</mat-option>
+                             <mat-option>None</mat-option>
+                             <mat-option *ngFor="let time of times" [value]="time">{{time}}</mat-option>
                           </mat-select>
-                        </mat-form-field>
-                      </div>
-
-                      <div class="col-md-6">
-                        <mat-form-field *ngFor="let contact of contacts?.controls; let i = index" class="example-full-width add_entrance" appearance="fill">
-                          <label>Entrance {{i + 1}}</label>
-                          <input matInput formControlName="entranceCtrl" placeholder="Glückstads gate 149" style="width:92%;">
-                          <button class="btn-remove" type="button" (click)="removeContactField(i)"><mat-icon>close</mat-icon></button>
-
-                        </mat-form-field>
-                        <button class="btn-add white_button " (click)="addContactField()">Add another entrance</button>
-                      </div>
-                  </div>
-
-
-                </form>
-                <div class="right_btn"><button class="blue_button " mat-button matStepperNext>Continue</button></div>
-                <div class="left_btn"><button class="white_button " mat-button matStepperNext>Cancel</button></div>
-              </mat-step>
-
-              <!-------  Step 2    -------->
-
-              <mat-step  [stepControl]="secondFormGroup" errorMessage="Address is required.">
-                <ng-template matStepperIcon="phone">
-                  <mat-icon>call_end</mat-icon>
-                </ng-template>
-                <ng-template matStepperIcon="chat">
-                  <mat-icon>forum</mat-icon>
-                </ng-template>
-                <form [formGroup]="secondFormGroup">
-                  <ng-template matStepLabel>COMPANY <p>{{companyname}}<p></ng-template>
-                  <div class="row form_bck" style="background-color:white; padding:20px;">
-                    <div class="col-md-12 ">
-                      <h3>Create company</h3>
-                      <label>Company name</label>
-                      <mat-form-field appearance="fill">
-
-                        <input matInput  (blur)="blurEventt($event)" formControlName="secondCtrl" required>
-                      </mat-form-field>
+                       </mat-form-field>
                     </div>
-
+                    <div class="col-md-6">
+                       <div *ngFor="let contact of contacts?.controls; let i = index">
+                          <label>Entrance {{i + 1}}</label>
+                          <mat-form-field  class="example-full-width add_entrance" appearance="fill">
+                             <input matInput formControlName="entranceCtrl" placeholder="Glückstads gate 149" style="width:92%;">
+                             <!-- <button class="btn-remove" type="button" (click)="removeContactField(i)"><mat-icon>close</mat-icon></button> -->
+                          </mat-form-field>
+                       </div>
+                       <button class="btn-add white_button " (click)="addContactField()">Add another entrance</button>
+                    </div>
+                 </div>
+              </form>
+              <div class="right_btn"><button class="blue_button " mat-button matStepperNext>Continue</button></div>
+              <div class="left_btn"><button class="white_button " mat-button matStepperNext>Cancel</button></div>
+           </mat-step>
+           <!-------  Step 2    -------->
+           <mat-step  [stepControl]="secondFormGroup" errorMessage="Address is required." state="waiting">
+              <form [formGroup]="secondFormGroup">
+                 <ng-template matStepLabel>
+                    COMPANY 
+                    <p>{{companyname}}
+                    <p>
+                 </ng-template>
+                 <div class="row form_bck" style="background-color:white; padding:20px;">
+                    <div class="col-md-12 ">
+                       <h3>Create company</h3>
+                       <label>Company name</label>
+                       <mat-form-field appearance="fill">
+                          <input matInput  (blur)="blurEventt($event)" formControlName="secondCtrl" required>
+                       </mat-form-field>
+                    </div>
                     <div class="col-md-7">
-                      <label>Location</label>
-                      <mat-form-field appearance="fill">
-
-                        <input matInput  formControlName="secondCtrl">
-                      </mat-form-field>
-
-                      <label>Domain</label>
-                          <mat-form-field appearance="fill">
-                            <input matInput  formControlName="secondCtrl" >
-                          </mat-form-field>
-
-                      <label>Email</label>
-                          <mat-form-field appearance="fill">
-                            <input matInput  formControlName="secondCtrl" >
-                          </mat-form-field>
-
-                      <label>Phone</label>
-                      <mat-form-field appearance="fill">
-                        <input matInput formControlName="secondCtrl" >
-                      </mat-form-field>
-
+                       <label>Location</label>
+                       <mat-form-field appearance="fill">
+                          <input matInput  formControlName="secondCtrl">
+                       </mat-form-field>
+                       <label>Domain</label>
+                       <mat-form-field appearance="fill">
+                          <input matInput  formControlName="secondCtrl" >
+                       </mat-form-field>
+                       <label>Email</label>
+                       <mat-form-field appearance="fill">
+                          <input matInput  formControlName="secondCtrl" >
+                       </mat-form-field>
+                       <label>Phone</label>
+                       <mat-form-field appearance="fill">
+                          <input matInput formControlName="secondCtrl" >
+                       </mat-form-field>
                     </div>
                     <div class="col-md-5">
-                      <div class="upload_img">
-                        <img [src]="url" title="Profile Picture" height="auto" width="150px" />
-                        <input
-                          type="file"
-                          id="img"
-                          style="display:none"
-                          accept="image/*"
-                          (change)="onSelect($event)"
-                        />
-                        <label class="upload_btn" for="img">Upload Image</label>
-                      </div>
-                  </div>
-                  </div>
-
-                </form>
-                <div class="right_btn">
-                  <button class="white_button " mat-button matStepperPrevious>Previous</button>
-                  <button class="blue_button " mat-button matStepperNext>Continue</button>
-                </div>
-                <div class="left_btn"><button class="white_button" mat-button (click)="stepper.reset">Cancel</button></div>
-              </mat-step>
-<!--    STEP 3    -->
-
-        <mat-step [stepControl]="thirdFormGroup">
-
-          <div class="show_div" *ngIf="display">
-            <app-add-manual-employee></app-add-manual-employee>
-          </div>
-          <form *ngIf="isShow" [formGroup]="thirdFormGroup">
-            <ng-template matStepLabel>EMPLOYEES <p>{{employeenumber}}</p> </ng-template>
-            <div class="row form_bck" style="background-color:white; padding:20px;">
-              <div class="col-md-12 ">
-                <h3>Create location</h3>
-
+                       <div class="upload_img">
+                          <img [src]="url" title="Profile Picture" height="auto" width="150px" />
+                          <input
+                             type="file"
+                             id="img"
+                             style="display:none"
+                             accept="image/*"
+                             (change)="onSelect($event)"
+                             />
+                          <label class="upload_btn" for="img">Upload Image</label>
+                       </div>
+                    </div>
+                 </div>
+              </form>
+              <div class="right_btn">
+                 <button class="white_button " mat-button matStepperPrevious>Previous</button>
+                 <button class="blue_button " mat-button matStepperNext>Continue</button>
               </div>
-
-
-
-              <div class="col-md-4">
-                <div class="card_import">
-                  <h5>Import multiple employees from an Excel file</h5>
-                  <img src="../assets/no_image.png" alt="no image">
-                  <button class="blue_button">Import with Excel</button>
-                </div>
+              <div class="left_btn"><button class="white_button" mat-button (click)="stepper.reset">Cancel</button></div>
+           </mat-step>
+           <!--    STEP 3    -->
+           <mat-step [stepControl]="thirdFormGroup" state="waiting">
+              <div class="show_div" *ngIf="display">
+                 <app-add-manual-employee></app-add-manual-employee>
               </div>
-
-              <div class="col-md-4">
-                <div class="card_import">
-                  <h5>Sync existing employees with Azure AD</h5>
-                  <img src="../assets/no_image.png" alt="no image">
-                  <button class="blue_button">Sync with Azure AD</button>
-                </div>
+              <form *ngIf="isShow" [formGroup]="thirdFormGroup">
+              <ng-template matStepLabel>
+                 EMPLOYEES 
+                 <p>{{employeenumber}}</p>
+              </ng-template>
+              <div class="row form_bck" style="background-color:white; padding:20px;">
+                 <div class="col-md-12 ">
+                    <h3>Create location</h3>
+                 </div>
+                 <div class="col-md-4">
+                    <div class="card_import">
+                       <h5>Import multiple employees from an Excel file</h5>
+                       <img src="../assets/no_image.png" alt="no image">
+                       <button class="blue_button">Import with Excel</button>
+                    </div>
+                 </div>
+                 <div class="col-md-4">
+                    <div class="card_import">
+                       <h5>Sync existing employees with Azure AD</h5>
+                       <img src="../assets/no_image.png" alt="no image">
+                       <button class="blue_button">Sync with Azure AD</button>
+                    </div>
+                 </div>
+                 <div class="col-md-4">
+                    <div class="card_import">
+                       <h5>Manually create new employees</h5>
+                       <img src="../assets/no_image.png" alt="no image">
+                       <button (click)="manualEmployee()" class="blue_button">Create manually</button>
+                    </div>
+                 </div>
               </div>
-
-              <div class="col-md-4">
-                <div class="card_import">
-                  <h5>Manually create new employees</h5>
-                  <img src="../assets/no_image.png" alt="no image">
-                  <button (click)="manualEmployee()" class="blue_button">Create manually</button>
-                </div>
+              </form>
+              <div class="right_btn">
+                 <button class="white_button " mat-button matStepperPrevious>Previous</button>
+                 <button class="blue_button " mat-button matStepperNext>Continue</button>
               </div>
-
-
-            </div>
-          </form>
-          <div class="right_btn">
-            <button class="white_button " mat-button matStepperPrevious>Previous</button>
-            <button class="blue_button " mat-button matStepperNext>Continue</button>
-          </div>
-          <div class="left_btn"><button class="white_button" mat-button (click)="stepper.reset">Cancel</button></div>
-        </mat-step>
-
-      </mat-stepper>
-
-    </div>
+              <div class="left_btn"><button class="white_button" mat-button (click)="stepper.reset">Cancel</button></div>
+           </mat-step>
+           <!-- Icon overrides. -->
+           <ng-template matStepperIcon="waiting">
+              <img src="../../../assets/empty_circle.svg" alt="empty circle">
+           </ng-template>
+           <!-- change default 'edit' icon -->
+           <ng-template matStepperIcon="edit">
+              <img src="../../../assets/current_step.svg" alt="current step">
+           </ng-template>
+           <!-- change default 'done' icon -->
+           <ng-template matStepperIcon="done">
+              <img src="../../../assets/stepper.svg" alt="stepper icon">
+           </ng-template>
+        </mat-stepper>
+     </div>
   </div>
 </div>

@@ -27,7 +27,6 @@ import { DeleteClientComponent } from './modals/delete-client/delete-client.comp
 import { ClientDashboardComponent } from './client-dashboard/client-dashboard.component';
 import { WorkplacesComponent } from './workplaces/workplaces/workplaces.component';
 import { LocationsComponent } from './workplaces/locations/locations.component';
-import {MatTabsModule} from '@angular/material/tabs';
 import { CompaniesComponent } from './workplaces/companies/companies.component';
 import {MatIconModule} from '@angular/material/icon';
 import { EmployeesComponent } from './workplaces/employees/employees.component';
@@ -48,6 +47,11 @@ import { UsersComponent } from './users/users.component';
 import { AddUserComponent } from './modals/add-user/add-user.component';
 import { EditUserComponent } from './modals/edit-user/edit-user.component';
 import { DeleteUserComponent } from './modals/delete-user/delete-user.component';
+import {MatTabsModule} from '@angular/material/tabs';
+import { LocationsTableComponent } from './workplaces/locations-table/locations-table.component';
+import { MapComponent } from './map/map.component';
+import { GuestsComponent } from './guests/guests.component';
+// import {TranslateModule} from '@ngx-translate/core';
 
 
 
@@ -79,7 +83,10 @@ import { DeleteUserComponent } from './modals/delete-user/delete-user.component'
     UsersComponent,
     AddUserComponent,
     EditUserComponent,
-    DeleteUserComponent
+    DeleteUserComponent,
+    LocationsTableComponent,
+    MapComponent,
+    GuestsComponent,
 
   ],
   imports: [
@@ -100,12 +107,14 @@ import { DeleteUserComponent } from './modals/delete-user/delete-user.component'
     MatSortModule,
     MatFormFieldModule,
     MatDialogModule,
-    MatTabsModule,
     MatIconModule,
     ReactiveFormsModule,
     MatCheckboxModule,
     RouterModule,
-    MatStepperModule
+    MatStepperModule, 
+    MatTabsModule,
+    // TranslateModule
+    
 
 
 

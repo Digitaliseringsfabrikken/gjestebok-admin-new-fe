@@ -1,50 +1,35 @@
 <div class="sidenav" [ngClass]="collapsed ? 'sidenav-collapsed': ''" *ngIf="router.url !== '/login'">
   <div class="logo-container">
-    <div class="user_card" role="button" (click)="toggleCollapse()">
-                  <img class="user_img" src="../../assets/image 18.png" alt="user img">
-                  <div class="info_user"  @fadeInOut *ngIf="collapsed">
-                    <span class="user_name">Hi, Alexander </span>
-                    <span class="user_role">Superadmin</span>
-                  </div>
-
-                  <img role="button" @fadeInOut *ngIf="collapsed" class="logout" src="../../assets/ic_round-log-out.svg" alt="logout">
-              </div>
-
+     <div class="user_card" role="button" (click)="toggleCollapse()">
+        <img class="user_img" src="../../assets/image 18.png" alt="user img">
+        <div class="info_user"  @fadeInOut *ngIf="collapsed">
+           <span class="user_name">Hi, Alexander </span>
+           <span class="user_role">Superadmin</span>
+        </div>
+        <img role="button" @fadeInOut *ngIf="collapsed" class="logout" src="../../assets/ic_round-log-out.svg" alt="logout">
+     </div>
   </div>
   <ul class="sidenav-nav">
-    <li class="sidenav-nav-item" *ngFor="let data of navData">
-      <a class="sidenav-nav-link" [routerLink]="[data.routeLink]" routerLinkActive="active_sub"
-         [routerLinkActiveOptions]="{exact: true}">
-       <img src="{{data.icon}}" class="sidenav-link-icon" />
-<!--        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg%22%3E%7B%7Bdata.icon%7D%7D</svg>-->
+     <li class="sidenav-nav-item" *ngFor="let data of navData">
+        <a class="sidenav-nav-link" [routerLink]="[data.routeLink]" routerLinkActive="active_sub"
+        [routerLinkActiveOptions]="{exact: true}">
+        <img src="{{data.icon}}" class="sidenav-link-icon" />
+        <!--        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg%22%3E%7B%7Bdata.icon%7D%7D</svg>-->
         <!-- <i class="sidenav-link-icon" [class]="data.icon"></i> -->
-
-
-
-
-
         <span class="sidenav-link-text" @fadeInOut *ngIf="collapsed">
-                    {{data.label}}
-                    <i class="collapse_icon" [class]="data.collapse"></i>
-                </span>
-      </a>
-      <ul class="submenu" *ngIf="collapsed && data.submenuLevel1 && data.submenuLevel1.length > 1"
-        [ngStyle]="{'margin-left': '60px'}">
-      <li *ngFor="let sub1 of data.submenuLevel1">
-        <a [routerLink]="[sub1.routeLink]" routerLinkActive="active_sub"
-           [routerLinkActiveOptions]="{exact: true}">
-          <span>{{sub1.label}}</span>
+        {{data.label}}
+        <i class="collapse_icon" [class]="data.collapse"></i>
+        </span>
         </a>
-
-<!--          <ul *ngIf="sub1.submenuLevel2 && sub1.submenuLevel2.length > 0" [ngStyle]="{'margin-left': '15px'}">-->
-<!--            <li *ngFor="let sub2 of sub1.submenuLevel2">-->
-<!--              <a [routerLink]="[sub2.routeLink]">-->
-<!--                <span>{{sub2.label}}</span>-->
-<!--              </a>-->
-<!--            </li>-->
-<!--          </ul>-->
-      </li>
-    </ul>
-    </li>
+        <ul class="submenu" *ngIf="collapsed && data.submenuLevel1 && data.submenuLevel1.length > 1"
+        [ngStyle]="{'margin-left': '60px'}">
+     <li *ngFor="let sub1 of data.submenuLevel1">
+        <a [routerLink]="[sub1.routeLink]" routerLinkActive="active_sub"
+        [routerLinkActiveOptions]="{exact: true}">
+        <span>{{sub1.label}}</span>
+        </a>
+     </li>
   </ul>
-</div>
+  </li>
+  </ul>
+  </div>

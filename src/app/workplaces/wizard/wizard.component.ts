@@ -11,9 +11,13 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './wizard.component.html',
   styleUrls: ['./wizard.component.css'],
   providers: [
+    // {
+    //   provide: STEPPER_GLOBAL_OPTIONS,
+    //   useValue: {showError: true},
+    // },
     {
       provide: STEPPER_GLOBAL_OPTIONS,
-      useValue: {showError: true},
+      useValue: {displayDefaultIndicatorType: false}
     }
   ],
 })

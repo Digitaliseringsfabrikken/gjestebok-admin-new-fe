@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, AfterViewInit} from '@angular/core';
+import { Component, OnInit, ViewChild, AfterViewInit, ChangeDetectorRef} from '@angular/core';
 import '@ag-grid-community/core/dist/styles/ag-theme-alpine.css';
 import { PacketService } from 'src/app/packet.service';
 import { ExcelService } from 'src/app/excel.service';
@@ -26,11 +26,20 @@ import { AddCompaniesComponent } from 'src/app/modals/add-companies/add-companie
 })
 export class CompaniesComponent implements OnInit, AfterViewInit {
 
+  numberOfTicks = 0;
+
   public clients :any
   public rowData = new MatTableDataSource<Client>();
   private gridApi!: GridApi;
   public displayedColumns = ['name', 'contact', 'domain', 'locations', 'edit', 'delete'];
-  constructor(private packetService: PacketService, private excelService:ExcelService, public dialog: MatDialog){}
+  constructor(private packetService: PacketService, private excelService:ExcelService, public dialog: MatDialog, private ref: ChangeDetectorRef){
+
+    setInterval(() => {
+      this.numberOfTicks++;
+      // require view to be updated
+      this.ref.markForCheck();
+    }, 150);
+  }
 
     // Final Popup
 openDialog(){
@@ -65,6 +74,8 @@ ngAfterViewInit() {
   this.rowData.paginator = this.paginator;
 }
 
+
+
 /** Announce the change in sort state for assistive technology. */
 announceSortChange(sortState: Sort) {
   if (sortState.direction) {
@@ -78,6 +89,7 @@ announceSortChange(sortState: Sort) {
 ngOnInit(): void {
   this.onAllClients()
 }
+
 
 
 onAllClients() {

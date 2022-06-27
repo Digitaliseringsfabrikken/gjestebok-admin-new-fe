@@ -11,7 +11,7 @@
     width: 35%;
 } */
 html,body{
-    background: #F2F7FF !important;
+    /* background: #F2F7FF !important; */
     /* height: 150vh !important; */
     width: 100%;
     position: relative;
@@ -72,3 +72,22 @@ label{
     display: block;
     margin-top: 20px;
 }
+.language{
+    float: right;
+}
+header{
+    margin-top: 30px;
+    padding: 0 20px;
+}
+.logo{
+    display: inline-block;
+}
+.mat-form-field-underline {
+    display: none;
+  }
+.mat-select-arrow{
+ display: none;
+  }
+  .login{
+    background: linear-gradient(180deg, #F2F8FF 1.22%, #FFFFFF 63.23%);
+  }

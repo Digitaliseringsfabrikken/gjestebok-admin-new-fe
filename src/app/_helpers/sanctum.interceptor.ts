@@ -15,13 +15,13 @@ export class SanctumInterceptor implements HttpInterceptor {
             return next.handle(request);
           }
         //   let token = this.tokenService.getToken() as string;
-          const token = 'eyJpdiI6IkJRa3FBU1B5VU83RHRPYjBFVU4zWnc9PSIsInZhbHVlIjoiVFlva0hiZmo1ektpRW1FeGFETFpCOTQya2FOQ3hKQitMRVQzRkZNM2RDTFJCNy9GV0hwcWxMNlU1bi83cURYT09oYytyZk13R3RUTXlGd1ZPcnUxR2lCV0JXeWkxcXlic25ic24zMEtwVGZhb1lacG4zWHNVSGxCbkpibXE4TmUiLCJtYWMiOiIwZWNlNGU3YjE3ODRiZGM1ZDZmZjdkYjQyNjY5ZWM5MzBjYTk4M2UyODk2YTc3ZGI1NjU4ZjE0MWU1NjM1Y2M2IiwidGFnIjoiIn0';
-          console.log('hereeee csrfToken', token)
+          const token = '';
+          // console.log('hereeee csrfToken', token)
           // Be careful not to overwrite an existing header of the same name.
           if (token !== null && !request.headers.has(this.headerName)) {
             request = request.clone({headers: request.headers.set(this.headerName, token)});
           }
-          console.log('ggggggggg', request, next.handle(request))
+          // console.log('ggggggggg', request, next.handle(request))
           return next.handle(request);
     }
 }

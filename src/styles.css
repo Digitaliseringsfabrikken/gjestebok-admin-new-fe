@@ -154,6 +154,8 @@ form input {
     color: #1252A1;
     /* background-color: #FAFCFE; */
     font-family: 'Roboto', sans-serif !important;
+    background-color: #FAFCFE !important;
+    border-radius: 4px;
 }
 form textarea {
     display: block;
@@ -169,8 +171,9 @@ form textarea {
     color: #1252A1;
     outline: none;
     box-sizing: border-box;
-    background-color: #FAFCFE;
+    background-color: #FAFCFE !important;
     font-family: 'Roboto', sans-serif !important;
+    border-radius: 4px;
 }
 form input[type="submit"] {
     width: auto;
@@ -541,3 +544,19 @@ td.mat-cell {
 .mat-option {
     color: #97ACCB !important;
 }
+/* STEPPER */
+::ng-deep .mat-step-icon-content{
+    background-color: transparent ;
+  }
+  
+/* SELECT */
+form .mat-select{
+    background: #FAFCFE;
+    border: 1px solid #DDE4EE;
+    border-radius: 4px;
+    padding:16px;
+  }
+  span.mat-select-value-text{
+    color:#1252A1 !important;
+  }
+

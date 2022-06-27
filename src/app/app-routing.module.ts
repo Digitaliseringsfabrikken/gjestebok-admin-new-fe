@@ -9,6 +9,10 @@ import { LocationsComponent } from './workplaces/locations/locations.component';
 import { WizardComponent } from './workplaces/wizard/wizard.component';
 import { DevicesComponent } from './devices/devices.component';
 import { UsersComponent } from './users/users.component';
+import { CompaniesComponent } from './workplaces/companies/companies.component';
+import { EmployeesComponent } from './workplaces/employees/employees.component';
+import { LocationsTableComponent } from './workplaces/locations-table/locations-table.component';
+import { GuestsComponent } from './guests/guests.component';
 
 const routes: Routes = [
   { path: '', 
@@ -34,10 +38,10 @@ const routes: Routes = [
     path: 'workplaces',
     component: WorkplacesComponent
   },
-  {
-    path: 'workplace-locations',
-    component: LocationsComponent
-  },
+  // {
+  //   path: 'workplace-locations',
+  //   component: LocationsComponent
+  // },
   {
   path: 'workplace-wizard',
   component: WizardComponent
@@ -49,7 +53,24 @@ const routes: Routes = [
   {
     path: 'users',
     component: UsersComponent
-  }
+  },
+  {
+    path: 'guests',
+    component: GuestsComponent
+  },
+
+  // TABS URL
+  {
+    path: 'locations',
+    component: LocationsComponent,
+    children: [
+      { path: '', component: EmployeesComponent },
+      { path: 'employees', component: EmployeesComponent },
+      { path: 'companies', component: CompaniesComponent },
+      { path: 'locations', component: LocationsTableComponent },
+    ],
+  },
+
 ];
 
 @NgModule({

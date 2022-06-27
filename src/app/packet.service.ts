@@ -3,7 +3,11 @@ import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders, HttpParams} from '@angular/common/http';
 
 const httpOptions = {
-    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+  headers: new HttpHeaders({
+    'X-XSRF-TOKEN': 'eyJpdiI6IkxlandDdU1ZejJ2Q29adE1FQkhWZ1E9PSIsInZhbHVlIjoiUnUwb1pDV3REL3VUMkN6cVBNeGxaekI3Sk5scndqMUxyZUZzbkhxUTFDNzd5eGtlQlpMbmVKNExOUzZvZ'
+
+  })
+    // headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   };
   
   
@@ -26,6 +30,15 @@ const httpOptions = {
         return this.http.get(this.apiPartialEndpoint + `/api/user`, data).pipe();
       }
       getAllUsers(){
-        return this.http.get(this.apiPartialEndpoint + `/api/users`).pipe();
+        return this.http.get(this.apiPartialEndpoint + `/api/users`, httpOptions).pipe();
+      }
+      getAllUsers1(): Observable<string[]> {
+        return this.http.get<string[]>(this.apiPartialEndpoint + '/api/users', httpOptions);
+      }
+      getLoggedInUser(){
+        return this.http.get(this.apiPartialEndpoint + `/api/user/loggedin`).pipe();
+      }
+      getAllRoles(){
+        return this.http.get(this.apiPartialEndpoint + `/api/roles`).pipe();
       }
     }
